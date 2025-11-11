@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 80px;
+}
+
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.footerSection h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.sectionTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.smallText {
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-weight: 300;
+}
+
+.footerSection ul {
+    list-style: none;
+}
+
+.footerSection ul li,
+.footerSection ul li a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 28px;
+}
+
+.subscribeForm {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    padding: 6px 10px;
+    border-radius: 6px;
+    width: 220px;
+}
+
+.subscribeForm input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.sendButton {
+    background: none;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.qrContainer {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.qrImage {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appImages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.googlePlay,
+.appleStore {
+    width: 110px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 700px) {
+    .footerContainer {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
