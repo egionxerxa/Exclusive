@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+html {
+  --max-width: 1400px;
+  --padding: 135px;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/font/Inter-VariableFont_opsz\,wght.ttf")
+    format("woff2");
+}
+header {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 2px solid whitesmoke;
+}
+.topHeader {
+  background-color: black;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.topHeaderContent {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.topHeaderContentDetails {
+  display: flex;
+  gap: 8px;
+}
+.shortSaleBanner {
+  display: none;
+}
+.shopNowBtn {
+  color: white;
+}
+.bottomHeader {
+  width: 100%;
+  padding-block: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-inline: var(--padding);
+}
+.navList {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 10px;
+}
+.navLink {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.searchBar {
+  position: relative;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+.searchInput {
+  width: 100%;
+  padding-inline: 20px;
+  padding-block: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+.searchInput::placeholder {
+  font-size: 12px;
+}
+.searchBar svg {
+  position: absolute;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+}
+.responsiveHeader {
+  display: none;
+  width: 100%;
+}
+.responsiveHeader svg {
+  height: 16px;
+  width: 16px;
+}
+
+@media (max-width: 45.2em) {
+  .saleBanner {
+    display: none;
+  }
+  .shortSaleBanner {
+    display: inline-block;
+  }
+  .topHeaderContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .bottomHeader {
+    display: none;
+  }
+  .responsiveHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 60em) {
+  .searchBar {
+    width: 150px;
+  }
+}
+@media (max-width: 66.3em) {
+  .bottomHeader {
+    padding-inline: 10px;
+  }
+}
