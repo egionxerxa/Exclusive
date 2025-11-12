@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  --max-width: 1400px;
+  --padding: 135px;
+}
+.container {
+  max-width: var(--max-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding-bottom: 100px;
+}
+.content {
+  width: 100%;
+  flex-grow: 1;
+  padding-right: var(--padding);
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.deviceImage {
+  width: 60%;
+  height: 400px;
+}
+.formContainer {
+  width: 25%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.formInput {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+}
+.submitContainer {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+.primaryButton {
+  width: 140px;
+  padding: 16px;
+  background-color: #db4444;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  flex-shrink: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.forgotPasswordLink {
+  text-decoration: none;
+  color: #db4444;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 45.3em) {
+  .container {
+    padding-bottom: unset;
+  }
+  .deviceImage {
+    display: none;
+  }
+
+  .content {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .formContainer {
+    width: 300px;
+    min-width: unset;
+  }
+}
