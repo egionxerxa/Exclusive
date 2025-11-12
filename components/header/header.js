@@ -4,7 +4,6 @@ class HeaderComponent extends HTMLElement {
   }
   render() {
     this.innerHTML = `
-             <link rel="stylesheet" href="../../components/header/header.css">
              <header>
       <div class="topHeader">
         <div class="topHeaderContent">

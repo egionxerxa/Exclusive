@@ -4,8 +4,7 @@ class FooterComponent extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `
-        <link rel="stylesheet" href="./components/footer/footer.css">
+        this.innerHTML = `       
             <footer class="footer">
         <div class="footerContainer">
 
@@ -146,7 +145,7 @@ class FooterComponent extends HTMLElement {
                             </svg>
                         </div>
                     </a>
-                    <a href="https//www.x.com">
+                    <a href="https://www.x.com">
                         <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_920_3020)">
