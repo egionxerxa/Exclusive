@@ -30,8 +30,8 @@ class HeaderComponent extends HTMLElement {
           <!-- Me i lidh linkat -->
           <li><a href="#" class="navLink">Home</a></li>
           <li><a href="#" class="navLink">Contact</a></li>
-          <li><a href="#" class="navLink">About</a></li>
-          <li><a href="#" class="navLink">Sign Up</a></li>
+          <li><a href="../../pages/about/about.html" class="navLink">About</a></li>
+          <li><a href="../../pages/user/signUpPage.html" class="navLink">Sign Up</a></li>
         </ul>
         <div class="searchContainer">
           <div class="searchBar">
