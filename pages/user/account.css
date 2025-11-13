@@ -82,12 +82,19 @@ html {
   }
 
   .content {
-    padding: 0px;
+    padding-inline: 30px;
     justify-content: center;
   }
 
   .formContainer {
-    width: 300px;
+    width: 90%;
+    overflow: hidden;
     min-width: unset;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .submitContainer {
+    flex-wrap: wrap;
   }
 }

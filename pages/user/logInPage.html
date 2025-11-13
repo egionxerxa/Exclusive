@@ -3,47 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive - SignUp</title>
+    <title>Exclusive - LogIn</title>
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
+
     <link rel="stylesheet" href="../../pages/user/account.css" />
-    <link rel="stylesheet" href="../../pages/user/signUpPage.css" />
   </head>
   <body>
     <div class="container">
       <custom-header></custom-header>
+
       <section class="content">
         <img
           src="../../assets/images/logInImage.jpg"
           alt="Device Image"
           class="deviceImage"
         />
+
         <div class="formContainer">
-          <h2 class="formTitle">Create an Account</h2>
+          <h2 class="formTitle">Logn in to Exclusive</h2>
           <p class="fromSubtext">Enter your details below</p>
+
           <form class="mainForm">
-            <input type="text" class="formInput" placeholder="Name" />
             <input
               type="text"
               class="formInput"
-              placeholder="Email or Phone Number"
+              placeholder="Email or Phone number"
             />
 
             <input type="password" class="formInput" placeholder="Password" />
-            <div class="signUpSubmit">
-              <!-- Plotso -->
-              <a href="#" class="primaryButton createAccount">Create Account</a>
-              <a href="#" class="primaryButton redirectToGoogleButton">
-                <img src="../../assets/images/Icon-Google.svg" alt="" />
-                Sign Up With Google
-              </a>
-              <div class="redirectLogin">
-                <p>Already have an account?</p>
-                <!-- Plotso -->
-                <a href="../../pages/user/logInPage.html">Log in</a>
-              </div>
+
+            <div class="submitContainer">
+              <!-- Plotsoj -->
+              <a href="#" class="primaryButton">Log In</a>
+              <a href="#" class="forgotPasswordLink">Forgot your password?</a>
             </div>
           </form>
         </div>

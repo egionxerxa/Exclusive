@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 .redirectLogin p {
   color: grey;
@@ -41,4 +41,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media screen and (max-width: 45.3em) {
+  .redirectLogin {
+    flex-wrap: wrap;
+  }
 }
