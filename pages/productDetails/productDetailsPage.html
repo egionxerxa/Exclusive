@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../components/header/header.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card/card.css" />
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
+    <script src="../../components/card/card.js"></script>
 
     <link rel="stylesheet" href="productDetailsPage.css" />
     <title>Exclusive - Product Details</title>
   </head>
   <body>
     <custom-header></custom-header>
+
     <section class="productDetailsSection">
       <div class="path">
         Account / Gaming / <span>Havic HV G-92 Gamepad</span>
@@ -223,6 +226,43 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="relatedItemsSection">
+      <div class="relatedItemsTitle">
+        <div class="redBar"></div>
+        <h4>Related Items</h4>
+      </div>
+
+      <div class="relatedCardsContainer">
+        <product-card
+          image=" ../../assets/images/redGamePad.png"
+          productTitle="HAVIT HV-G92 Gamepad"
+          price="$120"
+          stars="★★★★☆ (88)"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/keyboard.png"
+          productTitle="AK-900 Wired Keyboard"
+          price="$960"
+          stars="★★★★☆ (75)"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/monitor.png"
+          productTitle="IPS LCD Gaming Monitor"
+          price="$370"
+          stars="★★★★☆ (99)"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/liquidCooler.png"
+          productTitle="RGB liquid CPU Cooler"
+          price="$160"
+          stars="★★★★☆ (65)"
+        ></product-card>
       </div>
     </section>
     <custom-footer></custom-footer>

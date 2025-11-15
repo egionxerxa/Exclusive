@@ -237,3 +237,49 @@
 .freeDelivery {
   border-bottom: 1px solid grey;
 }
+.relatedItemsSection {
+  max-width: var(--max-width);
+  padding-inline: var(--padding);
+  margin-inline: auto;
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  color: #db4444;
+}
+.relatedItemsTitle {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: fit-content;
+}
+
+.redBar {
+  height: 100%;
+  width: 20px;
+  background-color: #db4444;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: width 0.3s ease-in-out;
+}
+.relatedItemsTitle:hover .redBar {
+  width: 100%;
+}
+.relatedItemsTitle:hover h4 {
+  color: white;
+  z-index: 3;
+}
+.relatedItemsTitle h4 {
+  position: relative;
+  padding-left: 40px;
+}
+.relatedCardsContainer {
+  display: flex;
+  gap: 15px;
+}
