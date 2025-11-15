@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+
+    <link rel="stylesheet" href="productDetailsPage.css" />
+    <title>Exclusive - Product Details</title>
+  </head>
+  <body>
+    <custom-header></custom-header>
+    <section class="productDetailsSection">
+      <div class="path">
+        Account / Gaming / <span>Havic HV G-92 Gamepad</span>
+      </div>
+
+      <div class="productContainer">
+        <div class="productImages">
+          <div class="image frontView">
+            <img
+              src="../../assets/images/gamePadFrontView.png"
+              alt="product Image"
+            />
+          </div>
+
+          <div class="image fullView">
+            <img
+              src="../../assets/images/gamePadFullView.png"
+              alt="product Image"
+            />
+          </div>
+
+          <div class="image rightSideAngle">
+            <img
+              src="../../assets/images/gamePadRightSideAngle.png"
+              alt="product Image"
+            />
+          </div>
+
+          <div class="image extendedView">
+            <img
+              src="../../assets/images/gamePadExtendedView.png"
+              alt="product Image"
+            />
+          </div>
+
+          <div class="image sideView">
+            <img
+              src="../../assets/images/gamePadSideView.png"
+              alt="product Image"
+            />
+          </div>
+        </div>
+
+        <div class="detailsContainer">
+          <div class="productInfo">
+            <h3>Havic HV G-92 Gamepad</h3>
+
+            <div class="statusAndRatingBar">
+              <div class="ratingContainer">
+                <img
+                  src="../../assets/images/ratingStar.svg"
+                  alt="Rating Star"
+                />
+                <img
+                  src="../../assets/images/ratingStar.svg"
+                  alt="Rating Star"
+                />
+                <img
+                  src="../../assets/images/ratingStar.svg"
+                  alt="Rating Star"
+                />
+                <img
+                  src="../../assets/images/ratingStar.svg"
+                  alt="Rating Star"
+                />
+                <img
+                  src="../../assets/images/unfilledStar.svg"
+                  alt="Unfilled Rating Star"
+                />
+                <span>(150 Reviews)</span>
+              </div>
+
+              <div class="statusContainer"><span>In Stock</span></div>
+            </div>
+
+            <h3 class="price">$ 192.00</h3>
+
+            <p class="description">
+              PlayStation 5 Controller Skin High quality vinyl with air channel
+              adhesive for easy bubble free install & mess free removal Pressure
+              sensitive.
+            </p>
+          </div>
+
+          <div class="purchaseOptions">
+            <div class="coloursContainer">
+              <span>Colours:</span>
+
+              <div class="coloursSelector">
+                <input
+                  type="radio"
+                  name="productColor"
+                  id="colorBlue"
+                  checked
+                  class="colorInput"
+                />
+                <label for="colorBlue" class="colorOption blueColor"></label>
+
+                <input
+                  type="radio"
+                  id="colorRed"
+                  name="productColor"
+                  value="red"
+                  class="colorInput"
+                />
+                <label for="colorRed" class="colorOption redColor"></label>
+              </div>
+            </div>
+
+            <div class="sizeContainer">
+              <span>Size:</span>
+              <div class="sizeSelector">
+                <input
+                  type="radio"
+                  id="sizeXs"
+                  name="productSize"
+                  class="sizeInput"
+                />
+                <label for="sizeXs" class="sizeOption">XS</label>
+
+                <input
+                  type="radio"
+                  id="sizeS"
+                  name="productSize"
+                  class="sizeInput"
+                />
+                <label for="sizeS" class="sizeOption">S</label>
+
+                <input
+                  type="radio"
+                  id="sizeM"
+                  name="productSize"
+                  class="sizeInput"
+                  checked
+                />
+                <label for="sizeM" class="sizeOption">M</label>
+
+                <input
+                  type="radio"
+                  id="sizeL"
+                  name="productSize"
+                  class="sizeInput"
+                />
+                <label for="sizeL" class="sizeOption">L</label>
+
+                <input
+                  type="radio"
+                  id="sizeXl"
+                  name="productSize"
+                  class="sizeInput"
+                />
+                <label for="sizeXl" class="sizeOption">XL</label>
+              </div>
+            </div>
+
+            <div class="purchaseActions">
+              <div class="quantityControls">
+                <button type="button" id="minusBtn" class="qtyBtn minusBtn">
+                  -
+                </button>
+
+                <input
+                  type="number"
+                  id="quantityInput"
+                  class="quantityInput"
+                  value="1"
+                  min="1"
+                  max="99"
+                />
+
+                <button type="button" id="plusBtn" class="qtyBtn plusBtn">
+                  +
+                </button>
+              </div>
+
+              <!-- PLOTSO -->
+              <a href="#" class="buyBtn">Buy Now</a>
+
+              <img
+                src="../../assets/images/heartIcon.svg"
+                class="heartIcon"
+                alt="Heart Icon"
+              />
+            </div>
+
+            <div class="deliveryDetails">
+              <div class="sideDelivery freeDelivery">
+                <img
+                  src="../../assets/images/truckDeliveryIcon.svg"
+                  alt="Truck Icon"
+                />
+                <div class="deliveryInfo">
+                  <h5>Free Delivery</h5>
+                  <!-- Plotso -->
+                  <a href="3"
+                    >Enter your postal code for Delivery Availability</a
+                  >
+                </div>
+              </div>
+              <div class="sideDelivery">
+                <img src="../../assets/images/returnDeliveryIcon.svg" alt="" />
+                <div class="deliveryInfo">
+                  <h5>Return Delivery</h5>
+                  <!-- Plotso -->
+                  <p>Free 30 Days Delivery Returns. <a href="#">Details</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <custom-footer></custom-footer>
+    <script src="productDetailsPage.js"></script>
+  </body>
+</html>
