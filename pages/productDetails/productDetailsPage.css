@@ -21,7 +21,7 @@
   column-gap: 30px;
   row-gap: 10px;
   display: grid;
-  grid-template-columns: 1fr 3fr; /* e majta 1fr, e djathta 3fr */
+  grid-template-columns: 1fr 3fr;
   grid-template-areas:
     "fullView      frontView"
     "rightSideAngle frontView"
@@ -39,7 +39,7 @@
 .image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ose cover nese do me mbush komplet */
+  object-fit: contain;
   image-rendering: auto;
 }
 .frontView {
@@ -281,5 +281,82 @@
 }
 .relatedCardsContainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 15px;
+  row-gap: 20px;
+}
+@media (max-width: 68.3em) {
+  .statusAndRatingBar {
+    flex-direction: column;
+  }
+  .statusContainer {
+    border: none;
+    padding: 0px;
+  }
+  .productImages {
+    width: 50%;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "frontView      frontView frontView frontView"
+      "frontView      frontView frontView frontView"
+      "fullView   rightSideAngle extendedView sideView";
+  }
+  .productDetailsSection {
+    padding-inline: 20px;
+  }
+  .relatedItemsSection {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 43.8em) {
+  .productContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .productImages {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .fullView,
+  .rightSideAngle,
+  .extendedView,
+  .sideView {
+    display: none;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  .detailsContainer {
+    width: 100%;
+    padding-inline: 10px;
+  }
+
+  .purchaseActions {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .quantityControls {
+    width: 45%;
+  }
+  .buyBtn {
+    width: 45%;
+  }
+  .heartIcon {
+    padding: 10px;
+    width: 32px;
+    height: 32px;
+  }
+  .relatedCardsContainer {
+    justify-content: space-around;
+    gap: 10px;
+  }
 }
