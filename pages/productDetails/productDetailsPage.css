@@ -1,0 +1,239 @@
+.productDetailsSection {
+  max-width: var(--max-width);
+  padding-inline: var(--padding);
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+.path {
+  padding-block: 50px;
+  color: grey;
+}
+.path span {
+  color: rgb(71, 70, 70);
+}
+.productContainer {
+  display: flex;
+  gap: 40px;
+}
+.productImages {
+  width: 60%;
+  column-gap: 30px;
+  row-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* e majta 1fr, e djathta 3fr */
+  grid-template-areas:
+    "fullView      frontView"
+    "rightSideAngle frontView"
+    "extendedView   frontView"
+    "sideView       frontView";
+}
+.image {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ose cover nese do me mbush komplet */
+  image-rendering: auto;
+}
+.frontView {
+  grid-area: frontView;
+}
+.fullView {
+  grid-area: fullView;
+}
+.rightSideAngle {
+  grid-area: rightSideAngle;
+}
+.extendedView {
+  grid-area: extendedView;
+}
+.sideView {
+  grid-area: sideView;
+}
+.detailsContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid grey;
+}
+.statusAndRatingBar {
+  display: flex;
+  gap: 16px;
+}
+.ratingContainer {
+  display: flex;
+  gap: 10px;
+}
+.ratingContainer span {
+  color: grey;
+}
+.statusContainer {
+  color: #00ff66;
+  font-size: 14px;
+  padding-left: 16px;
+  border-left: 1px solid grey;
+}
+.price {
+  font-weight: 300;
+}
+.description {
+  font-size: 14px;
+  width: 90%;
+  font-weight: 300;
+}
+.purchaseOptions {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.coloursContainer {
+  display: flex;
+  gap: 24px;
+}
+.coloursSelector {
+  display: flex;
+  gap: 8px;
+}
+.colorInput {
+  display: none;
+}
+
+.colorOption {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border-color 0.2s;
+}
+.blueColor {
+  background-color: #a0bce0;
+}
+.redColor {
+  background-color: #e07575;
+}
+.colorInput:checked + .colorOption {
+  border: 3px solid #333;
+}
+.sizeContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.sizeSelector {
+  display: flex;
+  gap: 8px;
+}
+.sizeInput {
+  display: none;
+}
+.sizeOption {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+.sizeInput:checked + .sizeOption {
+  background-color: #db4444;
+  color: white;
+  border-color: #db4444;
+}
+
+.purchaseActions {
+  display: flex;
+  gap: 16px;
+}
+.quantityControls {
+  display: flex;
+  width: 35%;
+  border: 1px solid gray;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.quantityInput {
+  text-align: center;
+  border: none;
+  width: 50%;
+  padding: 10px;
+}
+.qtyBtn {
+  width: 25%;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+}
+.qtyBtn:hover {
+  background-color: #db4444;
+  transition: background-color 0.3s;
+}
+.minusBtn {
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid grey;
+}
+.plusBtn {
+  border-radius: 0 4px 4px 0;
+  border-left: 1px solid grey;
+}
+
+.quantityInput::-webkit-inner-spin-button,
+.quantityInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.buyBtn {
+  width: 35%;
+  background-color: #db4444;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+.heartIcon {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.deliveryDetails {
+  border: 1px solid grey;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.sideDelivery {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  padding: 10px;
+  gap: 20px;
+}
+.sideDelivery a {
+  color: black;
+}
+.freeDelivery {
+  border-bottom: 1px solid grey;
+}
