@@ -5,7 +5,7 @@
   font-family: "Inter";
 }
 html {
-  --max-width: 1400px;
+  --max-width: 1600px;
   --padding: 135px;
 }
 @font-face {

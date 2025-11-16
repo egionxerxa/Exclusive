@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  --max-width: 1400px;
+  --max-width: 1600px;
   --padding: 135px;
 }
 .container {
@@ -22,13 +22,13 @@ html {
   padding-top: 60px;
   padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 150px;
 }
 .deviceImage {
   width: 60%;
-  height: 400px;
+  height: 600px;
 }
 .formContainer {
   width: 25%;
@@ -82,12 +82,13 @@ html {
   }
 
   .content {
-    padding-inline: 30px;
+    padding: 20px;
     justify-content: center;
+    gap: 30px;
   }
 
   .formContainer {
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     min-width: unset;
     border-radius: 10px;
