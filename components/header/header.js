@@ -29,7 +29,7 @@ class HeaderComponent extends HTMLElement {
         <ul class="navList">
           <!-- Me i lidh linkat -->
           <li><a href="#" class="navLink">Home</a></li>
-          <li><a href="#" class="navLink">Contact</a></li>
+          <li><a href="../../pages/contact/contact.html" class="navLink">Contact</a></li>
           <li><a href="../../pages/about/about.html" class="navLink">About</a></li>
           <li><a href="../../pages/user/signUpPage.html" class="navLink">Sign Up</a></li>
         </ul>
