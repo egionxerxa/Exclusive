@@ -1,0 +1,161 @@
+.container {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+.siteIntro {
+  padding-inline: var(--padding);
+  padding-top: 50px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.path {
+  color: grey;
+}
+.path span {
+  color: rgb(71, 70, 70);
+}
+.greeting span {
+  color: #db4444;
+}
+.accountSection {
+  padding-inline: var(--padding);
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.accountSidebarMenu {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.accountSidebarMenu h4 {
+  margin-bottom: 16px;
+}
+.sideMenuList {
+  padding-left: 35px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sideMenuList a {
+  color: grey;
+  text-decoration: none;
+}
+.sideMenuList a:hover {
+  color: #db4444;
+}
+.editProfileForm {
+  width: 70%;
+  padding-block: 40px;
+  padding-inline: 80px;
+  background-color: white;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.editProfileForm h3 {
+  color: #db4444;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "firstName lastName"
+    "email address"
+    "password password";
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inputBox input {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+}
+
+.fristName {
+  grid-area: firstName;
+}
+.lastName {
+  grid-area: lastName;
+}
+.email {
+  grid-area: email;
+}
+.address {
+  grid-area: address;
+}
+.password {
+  grid-area: password;
+  gap: 16px;
+}
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+.formActions button {
+  width: 140px;
+  padding: 16px;
+  background-color: #db4444;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  flex-shrink: 0;
+}
+.formActions a {
+  text-decoration: none;
+  color: black;
+}
+.formActions a:hover {
+  color: #db4444;
+}
+@media (max-width: 69.4em) {
+  .editProfileForm {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 59.5em) {
+  .accountSidebarMenu {
+    display: none;
+  }
+  .accountSection {
+    justify-content: center;
+    padding-inline: 20px;
+  }
+  .siteIntro {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 43.7em) {
+  .formContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas:
+      "firstName"
+      "lastName"
+      "email"
+      "address"
+      "password";
+  }
+}
+@media (max-width: 34.4em) {
+  .editProfileForm {
+    width: 90%;
+  }
+}

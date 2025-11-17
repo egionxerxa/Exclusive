@@ -109,7 +109,7 @@ class HeaderComponent extends HTMLElement {
               stroke-linejoin="round"
             />
           </svg>
-          <a href="#"
+          <a href="../../pages/profile/profilePage.html"
             ><svg
               width="32"
               height="32"
