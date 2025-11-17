@@ -72,6 +72,8 @@ class HeaderComponent extends HTMLElement {
               stroke-linejoin="round"
             />
           </svg>
+
+          <a href="../../pages/checkout/checkout.html">
           <svg
             class="cartSvg"
             width="32"
@@ -109,7 +111,8 @@ class HeaderComponent extends HTMLElement {
               stroke-linejoin="round"
             />
           </svg>
-          <a href="../../pages/profile/profilePage.html"
+          </a>
+          <a href="#"
             ><svg
               width="32"
               height="32"
@@ -163,6 +166,7 @@ class HeaderComponent extends HTMLElement {
               stroke-linejoin="round"
             />
           </svg>
+    
           <svg
             class="cartSvg"
             width="32"

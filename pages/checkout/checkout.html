@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="../../components/header/header.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <script src="../../components/header/header.js" defer></script>
+    <script src="../../components/footer/footer.js" defer></script>
+</head>
+
+<body>
+    <custom-header></custom-header>
+    <div class="container">
+        <div class="breadcrumb">
+            <span>Account</span>
+            <span>/</span>
+            <span>My Account</span>
+            <span>/</span>
+            <span>Product</span>
+            <span>/</span>
+            <span>View Cart</span>
+            <span>/</span>
+            <span class="current-page">CheckOut</span>
+        </div>
+        <div class="checkoutContainer">
+            <div class="billingDetails">
+                <h2>Billing Details</h2>
+                <form class="billingForm">
+                    <div class="input">
+                        <label>First Name*</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Company Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Street Address*</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Apartment, floor, etc. (optional)</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Town/City*</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Phone Number*</label>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <label>Email Address*</label>
+                        <input type="email">
+                    </div>
+                    <div class="saveInfo">
+                        <input type="checkbox" id="saveInfoCheck" />
+                        <label for="saveInfoCheck">Save this information for faster check-out next time</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="orderSummary">
+                <div class="productsList">
+                    <div class="product">
+                        <div class="productDetails">
+                            <img src="../../assets/images/Monitor-Cart-Small.png" alt="LCD Monitor Icon"
+                                class="productIcon">
+                            <span class="productName">LCD Monitor</span>
+                        </div>
+                        <span class="productPrice">$650</span>
+                    </div>
+                    <div class="product">
+                        <div class="productDetails">
+                            <img src="../../assets/images/Gamepad-Cart-Small.png" alt="HI Gamepad Icon"
+                                class="productIcon">
+                            <span class="productName">HI Gamepad</span>
+                        </div>
+                        <span class="productPrice">$1100</span>
+                    </div>
+                </div>
+
+                <div class="summary">
+                    <span class="summaryLabel">Subtotal:</span>
+                    <span class="summaryValue">$1750</span>
+                </div>
+                <div class="summary">
+                    <span class="summaryLabel">Shipping:</span>
+                    <span class="summaryValue">Free</span>
+                </div>
+                <div class="summary totalPrice">
+                    <span class="summaryLabel">Total:</span>
+                    <span class="summaryValue">$1750</span>
+                </div>
+
+                <div class="paymentOptions">
+                    <div class="paymentMethod">
+                        <input type="radio" id="bank" name="payment" checked>
+                        <label for="bank">Bank</label>
+                        <div class="cardIcons">
+                            <img src="../../assets/images/Frame 834.png" class="paymentIcons">
+                        </div>
+                    </div>
+                    <div class="paymentMethod">
+                        <input type="radio" id="cash" name="payment">
+                        <label for="cash">Cash on delivery</label>
+                    </div>
+                </div>
+
+                <div class="couponBox">
+                    <input type="text" placeholder="Coupon Code" class="couponInput">
+                    <button class="applyCouponBtn">Apply Coupon</button>
+                </div>
+
+                <button class="placeOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+
+</body>
+
+</html>

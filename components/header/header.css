@@ -10,8 +10,7 @@ html {
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../assets/font/Inter-VariableFont_opsz\,wght.ttf")
-    format("woff2");
+  src: url("../../assets/font/Inter-VariableFont_opsz\,wght.ttf") format("woff2");
 }
 header {
   max-width: var(--max-width);
