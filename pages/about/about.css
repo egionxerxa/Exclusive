@@ -13,69 +13,51 @@ html {
   margin-inline: auto;
 }
 
-.about-page-container {
+.aboutPageContainer {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.navbar {
-  padding: 15px 20px;
-  font-size: 0.9em;
-  color: #666;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.nav-item {
-  color: #666;
-  text-decoration: none;
-}
-
-.nav-item.active {
-  color: #333;
-  font-weight: bold;
-}
-
-.story-section {
+.storySection {
   display: flex;
   gap: 40px;
   margin-bottom: 50px;
   align-items: flex-start;
 }
 
-.story-section h1 {
+.storySection h1 {
   font-size: 3em;
   font-weight: 900;
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-.text-content {
+.textContent {
   flex: 1;
   max-width: 50%;
 }
 
-.text-content p {
+.textContent p {
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 1.1em;
 }
 
-.image-content {
+.imageContent {
   flex: 1;
-  min-height: 450px;
+  min-height: 250px;
   background-size: cover;
   background-position: center top;
 }
 
-.stats-section {
+.statsSection {
   display: flex;
   justify-content: space-between;
   gap: 15px;
 }
 
-.stat-card {
+.statCard {
   flex: 1;
   background-color: white;
   padding: 20px;
@@ -88,7 +70,7 @@ html {
   justify-content: center;
 }
 
-.icon-box {
+.iconBox {
   color: #000000;
   font-size: 1.5em;
   padding: 10px;
@@ -103,12 +85,12 @@ html {
   border: none;
 }
 
-.highlighted .icon-box {
+.highlighted .iconBox {
   background-color: #c93737;
   color: white;
 }
 
-.stat-value {
+.statValue {
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 5px;
@@ -117,7 +99,7 @@ html {
   justify-content: center;
 }
 
-.stat-label {
+.statLabel {
   font-size: 0.9em;
   text-align: center;
   padding-left: 10px;
@@ -125,67 +107,67 @@ html {
 }
 
 @media (max-width: 768px) {
-  .story-section {
+  .storySection {
     flex-direction: column;
     gap: 20px;
   }
 
-  .text-content {
+  .textContent {
     max-width: 100%;
     order: 2;
   }
 
-  .image-content {
+  .imageContent {
     order: 1;
     min-height: 300px;
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .story-section h1 {
+  .storySection h1 {
     font-size: 2.5em;
   }
 
-  .stats-section {
+  .statsSection {
     flex-wrap: wrap;
   }
 
-  .stat-card {
+  .statCard {
     flex: 1 1 calc(50% - 15px);
     margin-bottom: 15px;
     padding: 15px;
   }
 
-  .stat-value,
-  .stat-label {
+  .statValue,
+  .statLabel {
     font-size: 1.5em;
     padding-left: 0;
     text-align: left;
   }
 
-  .stat-label {
+  .statLabel {
     font-size: 0.8em;
   }
 
-  .icon-box {
+  .iconBox {
     font-size: 1.2em;
     margin-bottom: 5px;
   }
 }
 
-.team-section {
+.teamSection {
   padding: 60px 10%;
   background-color: #fff;
 }
 
-.team-container {
+.teamContainer {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.team-member {
+.teamMember {
   background-color: #f9f9f9;
   border-radius: 10px;
   padding: 20px;
@@ -194,31 +176,31 @@ html {
   transition: 0.3s ease;
 }
 
-.team-member:hover {
+.teamMember:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.team-member img {
+.teamMember img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.team-member h3 {
+.teamMember h3 {
   margin-top: 15px;
   font-size: 1.2rem;
   color: #111;
   text-align: start;
 }
 
-.team-member p {
+.teamMember p {
   color: #555;
   margin-bottom: 10px;
   text-align: start;
 }
 
-.social-icons {
+.socialIcons {
   font-size: 1.2rem;
   margin: 8px;
   color: #111;
@@ -227,7 +209,7 @@ html {
   text-align: start;
 }
 
-.social-icons {
+.socialIcons {
   color: #007bff;
 }
 .dots {
@@ -254,7 +236,7 @@ html {
   background-color: #999;
 }
 
-.service-section {
+.serviceSection {
   padding: 50px 10%;
   display: flex;
   justify-content: space-around;
@@ -263,13 +245,13 @@ html {
   background-color: #fff;
 }
 
-.service-box {
+.serviceBox {
   text-align: center;
   max-width: 250px;
   margin: 20px;
 }
 
-.service-box .icon {
+.serviceBox .icon {
   background-color: white;
   color: #fff;
   width: 60px;
@@ -282,24 +264,24 @@ html {
   font-size: 1.5rem;
 }
 
-.service-box h4 {
+.serviceBox h4 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.service-box p {
+.serviceBox p {
   color: #777;
   font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
-  .team-container {
+  .teamContainer {
     flex-direction: column;
     align-items: center;
   }
 
-  .service-section {
+  .serviceSection {
     flex-direction: column;
     text-align: center;
   }

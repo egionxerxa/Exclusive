@@ -5,9 +5,9 @@
 }
 
 .container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 20px;
+  max-width: 1170px;
+  margin: 50px auto;
+  padding: 0 15px;
 }
 
 .breadcrumb {
@@ -29,7 +29,7 @@
 .checkoutContainer {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
   margin: 20px 0;
 }
 
@@ -61,7 +61,7 @@
 
 .input input[type="text"],
 .input input[type="email"] {
-  width: 50%;
+  width: 100%;
   padding: 10px 15px;
   border-radius: 4px;
   border: 1px solid #cccccc;
@@ -101,12 +101,34 @@
   left: 2px;
 }
 
+@media (max-width: 768px) {
+  .checkoutContainer {
+    flex-direction: column;
+  }
+
+  .billingDetails,
+  .orderSummary {
+    width: 100%;
+  }
+
+  .couponBox {
+    flex-direction: column;
+  }
+
+  .applyCouponBtn {
+    width: 100%;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+}
+
 .orderSummary {
-  width: 450px;
-  padding: 30px;
-  border: 1px solid #cccccc;
+  flex: 1;
+  padding: 20px;
   border-radius: 4px;
-  height: fit-content;
+  margin-top: 70px;
 }
 
 .productsList {
@@ -194,16 +216,25 @@
 
 .paymentMethod input[type="radio"] {
   appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
   border-radius: 50%;
+  margin-right: 15px;
   position: relative;
 }
 
-.paymentMethod input[type="radio"]:checked {
-  border: 1px solid black;
-  background: black;
+.paymentMethod input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
 }
 
 .paymentIcons {
@@ -255,4 +286,20 @@
 .applyCouponBtn:hover,
 .placeOrderBtn:hover {
   background-color: #e07474;
+}
+
+@media (max-width: 480px) {
+  .billingDetails,
+  .orderSummary {
+    padding: 15px;
+  }
+
+  .productIcon {
+    width: 35px;
+  }
+
+  .placeOrderBtn {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

@@ -1,0 +1,65 @@
+.serviceSection {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #fff;
+  max-width: 1170px;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+}
+
+.serviceBox {
+  text-align: center;
+  max-width: 250px;
+  padding: 15px;
+  flex-basis: 30%;
+}
+
+.serviceBox .icon {
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+}
+
+.serviceBox .icon svg {
+  width: 80px;
+  height: 80px;
+}
+
+.serviceBox h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.serviceBox p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .serviceSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+  }
+
+  .serviceBox {
+    margin-bottom: 30px;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .serviceBox h4,
+  .serviceBox p {
+    text-align: center;
+  }
+}
