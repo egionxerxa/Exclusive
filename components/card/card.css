@@ -1,127 +1,127 @@
 .cardContainer {
-    width: 260px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: relative;
-    font-family: sans-serif;
+  width: 220px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: sans-serif;
 }
 
 .imageWrapper {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f5f5;
-    position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  position: relative;
 }
 
 .productImage {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
 }
 
 .hoverIcons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
 }
 
 .iconButton {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    box-shadow: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .iconButton:focus,
 .iconButton:active {
-    outline: none;
-    border: none;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .iconButton svg {
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    outline: none;
-    border: none;
-    box-shadow: none;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .addToCartBtn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px 0;
-    background: #000;
-    color: #fff;
-    font-size: 15px;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(10px);
-    outline: none;
-    border: none;
-    box-shadow: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .addToCartBtn:focus,
 .addToCartBtn:active {
-    outline: none;
-    border: none;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .cardContainer:hover .hoverIcons,
 .cardContainer:hover .addToCartBtn {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cardBody {
-    padding: 12px;
+  padding: 12px;
 }
 
 .productTitle {
-    font-size: 16px;
-    font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .priceRow {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .priceText {
-    color: #e63946;
-    font-weight: 700;
+  color: #e63946;
+  font-weight: 700;
 }
 
 .starsRow {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #999;
-    font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #999;
+  font-size: 14px;
 }
-
