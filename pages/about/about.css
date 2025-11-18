@@ -5,7 +5,7 @@ body {
 }
 
 html {
-  --max-width: 1400px;
+  --max-width: 1600px;
   --padding: 135px;
 }
 .pageNotFoundContainer {
@@ -14,9 +14,13 @@ html {
 }
 
 .aboutPageContainer {
-  padding: 20px;
-  max-width: 1200px;
+  padding: var(--padding);
+  max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.aboutImage {
+  width: 50%;
 }
 
 .storySection {
@@ -106,7 +110,25 @@ html {
   line-height: 1.3;
 }
 
+@media (max-width: 1024px) {
+  .aboutPageContainer {
+    padding: 40px;
+  }
+
+  .storySection {
+    flex-direction: column-reverse;
+  }
+
+  .aboutImage {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .aboutPageContainer {
+    padding: 20px;
+  }
+
   .storySection {
     flex-direction: column;
     gap: 20px;
@@ -156,13 +178,15 @@ html {
 }
 
 .teamSection {
-  padding: 60px 10%;
-  background-color: #fff;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .teamContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -170,9 +194,8 @@ html {
 .teamMember {
   background-color: #f9f9f9;
   border-radius: 10px;
-  padding: 20px;
   text-align: center;
-  width: 300px;
+  width: 30%;
   transition: 0.3s ease;
 }
 
@@ -190,19 +213,22 @@ html {
 .teamMember h3 {
   margin-top: 15px;
   font-size: 1.2rem;
+  padding: 5px 20px;
   color: #111;
   text-align: start;
 }
 
 .teamMember p {
   color: #555;
+  padding: 5px 20px;
   margin-bottom: 10px;
   text-align: start;
 }
 
 .socialIcons {
   font-size: 1.2rem;
-  margin: 8px;
+  padding: 5px 20px;
+  margin-bottom: 10px;
   color: #111;
   cursor: pointer;
   transition: 0.3s;
@@ -234,15 +260,6 @@ html {
 
 .dot:hover {
   background-color: #999;
-}
-
-.serviceSection {
-  padding: 50px 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #fff;
 }
 
 .serviceBox {
@@ -279,10 +296,5 @@ html {
   .teamContainer {
     flex-direction: column;
     align-items: center;
-  }
-
-  .serviceSection {
-    flex-direction: column;
-    text-align: center;
   }
 }

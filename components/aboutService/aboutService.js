@@ -1,9 +1,9 @@
 class AboutService extends HTMLElement {
-  constructor() {
-    super();
+  connectedCallback() {
+    this.render();
+  }
+  render() {
     this.innerHTML = `
-            <link rel="stylesheet" href="../../components/about-service/aboutService.css">
-            
             <section class="serviceSection">
                 <div class="serviceBox">
                     <div class="icon">
