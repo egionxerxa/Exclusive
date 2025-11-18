@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../components/footer/footer.css" />
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
+    <script src="validation.js" defer></script>
 
     <link rel="stylesheet" href="../../pages/user/account.css" />
   </head>
@@ -26,18 +27,24 @@
           <h2 class="formTitle">Logn in to Exclusive</h2>
           <p class="fromSubtext">Enter your details below</p>
 
-          <form class="mainForm">
+          <form class="mainForm" id="loginForm">
             <input
               type="text"
               class="formInput"
+              id="loginIdentifier"
               placeholder="Email or Phone number"
             />
 
-            <input type="password" class="formInput" placeholder="Password" />
+            <input 
+            type="password" 
+            class="formInput"
+            id="loginPassword" 
+            placeholder="Password" 
+            />
 
             <div class="submitContainer">
               <!-- Plotsoj -->
-              <a href="#" class="primaryButton">Log In</a>
+              <button type="submit" href="#" class="primaryButton">Log In</button>
               <a href="#" class="forgotPasswordLink">Forgot your password?</a>
             </div>
           </form>
