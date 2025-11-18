@@ -5,7 +5,6 @@ const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
 
     const identifier = document.getElementById("loginIdentifier").value.trim();
     const password = document.getElementById("loginPassword").value.trim();
@@ -38,7 +37,6 @@ const signupForm = document.getElementById("signupForm");
 
 if (signupForm) {
   signupForm.addEventListener("submit", function (e) {
-    e.preventDefault();
 
     const name = document.getElementById("signupName").value.trim();
     const identifier = document.getElementById("signupIdentifier").value.trim();
