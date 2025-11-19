@@ -211,7 +211,7 @@
   text-align: center;
   text-decoration: none;
 }
-.heartSvg {
+.wishListIcon {
   padding: 5px;
   border: 1px solid grey;
   border-radius: 4px;
@@ -350,7 +350,7 @@
   .buyBtn {
     width: 45%;
   }
-  .heartIcon {
+  .wishListIcon {
     padding: 10px;
     width: 32px;
     height: 32px;
