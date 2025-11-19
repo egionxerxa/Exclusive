@@ -73,7 +73,7 @@ class HeaderComponent extends HTMLElement {
             />
           </svg>
 
-          <a href="../../pages/checkout/checkout.html">
+          <a href="../../pages/cart/cart.html">
           <svg
             class="cartSvg"
             width="32"
