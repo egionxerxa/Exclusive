@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card/card.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/aboutService/aboutService.css"
+    />
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+    <script src="../../components/card/card.js"></script>
+    <script src="../../components/aboutService/aboutService.js"></script>
+
+    <link rel="stylesheet" href="../../pages/home/homePage.css" />
+    <title>Exclusive - Home Details</title>
+  </head>
+  <body>
+    <custom-header></custom-header>
+    <!-- EGIONI -->
+
+    <!-- AGNESA -->
+    <div class="discoveryArea">
+      <section class="promoBannerSection">
+        <div class="bannerContent">
+          <span>Categories</span>
+
+          <h1 class="bannerTitle">Enhance Your Music Experience</h1>
+          <div class="bannerTimeContainer">
+            <div class="time">
+              <h6>23</h6>
+              <span>Hours</span>
+            </div>
+
+            <div class="time">
+              <h6>05</h6>
+              <span>Days</span>
+            </div>
+
+            <div class="time">
+              <h6>59</h6>
+              <span>Minutes</span>
+            </div>
+
+            <div class="time">
+              <h6>35</h6>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+          <!-- Plotsoje -->
+          <button class="buyButton">Buy Now!</button>
+        </div>
+        <img
+          src="../../assets/images/jblImage.png"
+          alt="Jbl Image"
+          class="bannerImage"
+        />
+      </section>
+
+      <section class="exploreSection">
+        <div class="sectionIntro">
+          <div class="sectionIndicator">
+            <div class="redBar"></div>
+            <h4>Our Products</h4>
+          </div>
+
+          <h2 class="exploreSectionTitle">Explore Our Products</h2>
+        </div>
+
+        <div class="exploreProductCards">
+          <product-card
+            image="../../assets/images/gamePadFrontView.png"
+            productTitle="HAVIT HV-G92 Gamepad"
+            price="$192"
+            stars="★★★★☆ (88)"
+            id="mainProduct"
+            onClick="redirectToDetails('mainProduct')"
+          ></product-card>
+
+          <product-card
+            image=" ../../assets/images/canonCameraImage.png"
+            productTitle="CANON EOS DSLR Camera"
+            price="$360"
+            stars="★★★★☆ (96)"
+          ></product-card>
+
+          <product-card
+            image="../../assets/images/keyboard.png"
+            productTitle="AK-900 Wired Keyboard"
+            price="$960"
+            stars="★★★★☆ (96)"
+          ></product-card>
+          <product-card
+            image="../../assets/images/gamingLaptopImage.png"
+            productTitle="ASUS FHD Gaming Laptop"
+            price="$700"
+            stars="★★★★☆ (96)"
+          ></product-card>
+          <product-card
+            image=" ../../assets/images/kidElectricCarImage.png"
+            productTitle="Kids Electric Car"
+            price="$960"
+            stars="★★★★☆ (96)"
+          ></product-card>
+
+          <product-card
+            image=" ../../assets/images/soccerCleatsImage.png"
+            productTitle="Jr. Zoom Soccer Cleats"
+            price="$1160"
+            stars="★★★★☆ (96)"
+          ></product-card>
+
+          <product-card
+            image=" ../../assets/images/shooterGamePadImage.png"
+            productTitle="GP11 Shooter USB Gamepad"
+            price="$660"
+            stars="★★★★☆ (96)"
+          ></product-card>
+
+          <product-card
+            image=" ../../assets/images/satinJacketImage.png"
+            productTitle="Quilted Satin Jacket"
+            price="$660"
+            stars="★★★★☆ (96)"
+          ></product-card>
+        </div>
+
+        <!-- Plotsoje -->
+        <button class="viewProductsBtn">View All Products</button>
+      </section>
+
+      <section class="newArrivalSection">
+        <div class="sectionIntro">
+          <div class="sectionIndicator">
+            <div class="redBar"></div>
+            <h4>Featured</h4>
+          </div>
+
+          <h2 class="exploreSectionTitle">New Arrival</h2>
+        </div>
+
+        <div class="productCollectionsContainer">
+          <div class="playStationCollection collection">
+            <img
+              src="../../assets/images/playStation.png"
+              alt="Play Station Image"
+            />
+            <div class="collectionContent">
+              <h3>PlayStation 5</h3>
+              <p>Black and White version of the PS5 coming out on sale.</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="womensCollection collection">
+            <img
+              src="../../assets/images/womenCollectionImage.jpg"
+              alt="Women Image"
+            />
+            <div class="collectionContent">
+              <h3>Women’s Collections</h3>
+              <p>Featured woman collections that give you another vibe.</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="speakersCollection collection">
+            <img src="../../assets/images/speaker.png" alt="Speaker Image" />
+            <div class="collectionContent">
+              <h3>Speakers</h3>
+              <p>Amazon wireless speakers</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="perfumeCollection collection">
+            <img src="../../assets/images/perfume.png" alt="Perfume Image" />
+            <div class="collectionContent">
+              <h3>Perfume</h3>
+              <p>GUCCI INTENSE OUD EDP</p>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <about-service></about-service>
+    </div>
+
+    <custom-footer></custom-footer>
+  </body>
+  <script src="homePage.js"></script>
+</html>
