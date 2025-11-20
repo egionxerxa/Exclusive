@@ -1,10 +1,23 @@
 class HeaderComponent extends HTMLElement {
   connectedCallback() {
     this.render();
+    this.setupMenuToggle();
   }
+
+  setupMenuToggle() {
+    const header = this.querySelector("header");
+    const burgerIcon = this.querySelector(".burgerIcon");
+
+    if (burgerIcon && header) {
+      burgerIcon.addEventListener("click", () => {
+        header.classList.toggle("mobileMenuOpen");
+      });
+    }
+  }
+
   render() {
     this.innerHTML = `
-             <header>
+        <header>
       <div class="topHeader">
         <div class="topHeaderContent">
           <div class="topHeaderContentDetails">
@@ -13,10 +26,8 @@ class HeaderComponent extends HTMLElement {
               50%!
             </p>
             <p class="shortSaleBanner">Summer Sale 50%</p>
-            <!-- Lidhe faqen -->
             <a href="#" class="shopNowBtn">Shop Now</a>
           </div>
-          <!-- Perfundo -->
           <div class="languageSelect">
             <label for="">English</label>
           </div>
@@ -27,7 +38,7 @@ class HeaderComponent extends HTMLElement {
         <h1 class="exclusiveHeading">Exclusive</h1>
 
         <ul class="navList">
-         
+          
           <li><a href="../../pages/home/homePage.html"  class="navLink">Home</a></li>
           <li><a href="../../pages/contact/contact.html" class="navLink">Contact</a></li>
           <li><a href="../../pages/about/about.html" class="navLink">About</a></li>
@@ -141,7 +152,7 @@ class HeaderComponent extends HTMLElement {
       </div>
 
       <div class="responsiveHeader">
-        <svg width="40" height="40" viewBox="0 0 100 100">
+        <svg class="burgerIcon" width="40" height="40" viewBox="0 0 100 100">
           <rect x="20" y="25" width="60" height="10" fill="#000" rx="5" />
           <rect x="20" y="45" width="60" height="10" fill="#000" rx="5" />
           <rect x="20" y="65" width="60" height="10" fill="#000" rx="5" />
@@ -204,7 +215,7 @@ class HeaderComponent extends HTMLElement {
               stroke-linejoin="round"
             />
           </svg>
-          <a href="#"
+          <a href="../../pages/profile/profilePage.html"
             ><svg
               width="32"
               height="32"
@@ -231,7 +242,39 @@ class HeaderComponent extends HTMLElement {
           </a>
         </div>
       </div>
-    </header>
+      
+      <nav class="mobileNav">
+        <ul class="mobileNavList">
+          <li><a href="../../pages/home/homePage.html" class="navLink">Home</a></li>
+          <li><a href="../../pages/contact/contact.html" class="navLink">Contact</a></li>
+          <li><a href="../../pages/about/about.html" class="navLink">About</a></li>
+          <li><a href="../../pages/user/signUpPage.html" class="navLink">Sign Up</a></li>
+          <li class="mobileSearch">
+            <div class="searchBar">
+              <input
+                class="searchInput"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.75 16.75L12.9723 12.9656M15.0658 7.90789C15.0658 9.80629 14.3117 11.6269 12.9693 12.9693C11.6269 14.3117 9.80629 15.0658 7.90789 15.0658C6.0095 15.0658 4.18886 14.3117 2.8465 12.9693C1.50413 11.6269 0.75 9.80629 0.75 7.90789C0.75 6.0095 1.50413 4.18886 2.8465 2.8465C4.18886 1.50413 6.0095 0.75 7.90789 0.75C9.80629 0.75 11.6269 1.50413 12.9693 2.8465C14.3117 4.18886 15.0658 6.0095 15.0658 7.90789V7.90789Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      </header>
         `;
   }
 }
