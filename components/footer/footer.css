@@ -2,13 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Inter";
+}
+
+html {
+    --max-width: 1600px;
+    --padding: 135px;
 }
 
 .footer {
     background: #000;
     color: #fff;
-    padding: 60px 80px;
+    padding: 60px var(--padding);
+    max-width: var(--max-width);
+    margin-inline: auto;
 }
 
 .footerContainer {
@@ -125,10 +132,46 @@
     border-top: 1px solid #222;
 }
 
-@media (max-width: 700px) {
-    .footerContainer {
-        flex-direction: column;
-        gap: 50px;
+@media (max-width: 768px) {
+    .saleBanner {
+        display: none;
+    }
+
+    .shortSaleBanner {
+        display: inline-block;
+    }
+
+    .topHeaderContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .bottomHeader {
+        display: none;
+    }
+
+    .responsiveHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 20px;
+        padding-block: 10px;
+    }
+
+    header.mobileMenuOpen .mobileNav {
+        height: 300px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .searchBar {
+        width: 150px;
+    }
+
+    .bottomHeader {
+        padding-inline: 10px;
     }
 }
 
