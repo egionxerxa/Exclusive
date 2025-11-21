@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter";
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -11,11 +11,13 @@ html {
 }
 
 .footer {
-    background: #000;
-    color: #fff;
-    padding: 60px var(--padding);
     max-width: var(--max-width);
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
+    padding: 60px 80px;
 }
 
 .footerContainer {
@@ -23,6 +25,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 60px;
+    width: 100%;
 }
 
 .footerSection h3 {
@@ -132,46 +135,81 @@ html {
     border-top: 1px solid #222;
 }
 
-@media (max-width: 768px) {
-    .saleBanner {
-        display: none;
-    }
-
-    .shortSaleBanner {
-        display: inline-block;
-    }
-
-    .topHeaderContent {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .bottomHeader {
-        display: none;
-    }
-
-    .responsiveHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-inline: 20px;
-        padding-block: 10px;
-    }
-
-    header.mobileMenuOpen .mobileNav {
-        height: 300px;
-    }
-}
-
 @media (max-width: 1024px) {
-    .searchBar {
-        width: 150px;
+    .footer {
+        padding: 50px 40px;
     }
 
-    .bottomHeader {
-        padding-inline: 10px;
+    .footerContainer {
+        gap: 40px;
+    }
+
+    .googlePlay,
+    .appleStore {
+        width: 95px;
+        height: 32px;
+    }
+
+    .qrImage {
+        width: 65px;
+        height: 65px;
     }
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footerSection h3 {
+        font-size: 16px;
+    }
+
+    .smallText,
+    .footerSection ul li,
+    .footerSection ul li a {
+        font-size: 13px;
+    }
+
+    .subscribeForm {
+        width: 100%;
+    }
+
+    .qrContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .qrImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .googlePlay,
+    .appleStore {
+        width: 90px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerBottom {
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+
+
+
 
