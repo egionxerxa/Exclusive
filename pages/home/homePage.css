@@ -1,8 +1,7 @@
 .discoveryArea {
   padding-inline: var(--padding);
   max-width: var(--max-width);
-  margin-inline: auto;
-  margin: 50px 0;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
