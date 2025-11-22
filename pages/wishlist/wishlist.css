@@ -1,0 +1,112 @@
+.container {
+  max-width: var(--max-width);
+  padding-inline: var(--padding);
+  margin-inline: auto;
+  margin: 100px 0;
+}
+
+.moveBtn,
+.seeAll {
+  padding: 10px 18px;
+  border: 1px solid #000;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+  justify-items: center;
+}
+
+.wishlistHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.wishlistHeader h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.sectionIndicator {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  width: fit-content;
+}
+
+.redBar {
+  height: 100%;
+  width: 20px;
+  background-color: #db4444;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: width 0.3s ease-in-out;
+}
+
+.sectionIndicator:hover .redBar {
+  width: 100%;
+}
+
+.sectionIndicator:hover h4 {
+  color: white;
+  z-index: 3;
+}
+
+.sectionIndicator h4 {
+  position: relative;
+  padding-left: 40px;
+  color: #db4444;
+}
+
+@media (max-width: 1100px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 20px;
+    margin: 50px 0;
+  }
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moveBtn,
+  .seeAll {
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../components/card/card.css" />
+    <script src="../../components/header/header.js" defer></script>
+    <script src="../../components/footer/footer.js" defer></script>
+    <script src="../../components/card/card.js" defer></script>
+  </head>
+
+  <body>
+    <custom-header></custom-header>
+
+    <div class="container">
+      <div class="wishlistHeader">
+        <h2>Wishlist (4)</h2>
+        <button class="moveBtn">Move All To Bag</button>
+      </div>
+
+      <div class="productsGrid">
+        <product-card
+          image="../../assets/images/bag.png"
+          productTitle="Gucci duffle bag"
+          price="$960"
+          originalPrice="$1160"
+          discount="35"
+          stars="★★★★★ (65)"
+          showDelete="true"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/liquidCooler.png"
+          productTitle="RGB liquid CPU Cooler"
+          price="$1960"
+          stars="★★★★★ (65)"
+          showDelete="true"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/shooterGamePadImage.png"
+          productTitle="GP11 Shooter USB Gamepad"
+          price="$550"
+          stars="★★★★★ (65)"
+          showDelete="true"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/satinJacketImage.png"
+          productTitle="Quilted Satin Jacket"
+          price="$750"
+          stars="★★★★★ (65)"
+          showDelete="true"
+        ></product-card>
+      </div>
+
+      <div class="sectionHeader">
+        <div class="sectionIndicator">
+          <div class="redBar"></div>
+          <h4>Just For You</h4>
+        </div>
+        <button class="seeAll">See All</button>
+      </div>
+
+      <div class="productsGrid">
+        <product-card
+          image="../../assets/images/gamingLaptopImage.png"
+          productTitle="ASUS FHD Gaming Laptop"
+          price="$960"
+          originalPrice="$1160"
+          discount="35"
+          stars="★★★★★ (65)"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/monitor.png"
+          productTitle="IPS LCD Gaming Monitor"
+          price="$1160"
+          stars="★★★★★ (65)"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/redGamePad.png"
+          productTitle="HAVIT HV-G92 Gamepad"
+          price="$560"
+          stars="★★★★★ (65)"
+          new="true"
+        ></product-card>
+
+        <product-card
+          image="../../assets/images/keyboard.png"
+          productTitle="AK-900 Wired Keyboard"
+          price="$200"
+          stars="★★★★★ (65)"
+        ></product-card>
+      </div>
+    </div>
+
+    <custom-footer></custom-footer>
+  </body>
+</html>

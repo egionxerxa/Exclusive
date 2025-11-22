@@ -10,34 +10,45 @@ class CardComponent extends HTMLElement {
     const originalPrice = this.getAttribute("originalPrice");
     const stars = this.getAttribute("stars");
     const discount = this.getAttribute("discount");
+    const isNew = this.getAttribute("new");
+    const showDelete = this.getAttribute("showDelete");
 
     const originalPriceHtml = originalPrice ? `<span class="originalPrice">${originalPrice}</span>` : "";
+    const discountBadge = discount ? `<div class="discountBadge">-${discount}%</div>` : "";
+    const newBadge = isNew !== null ? `<div class="newBadge">NEW</div>` : "";
 
-    const discountBadgeHtml = discount ? `<div class="discountBadge">-${discount}%</div>` : "";
+    const buttons = showDelete
+      ? `
+        <div class="hoverIcons">
+        <button class="iconButton heartIcon">
+             <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M16.7803 3.35143H2.11361L3.44694 18.78H14.1136L15.4469 3.35143H0.780273M8.78027 7.20857V14.9229M12.1136 7.20857L11.4469 14.9229M5.44694 7.20857L6.11361 14.9229M6.11361 3.35143L6.78027 0.779999H10.7803L11.4469 3.35143" stroke="black" stroke-width="1.56" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      </button>
+      </div>`
+      : `<div class="hoverIcons">
+        <button class="iconButton heartIcon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5C5.7912 5 4 6.73964 4 8.88594C4 10.6185 4.7 14.7305 11.5904 18.8873C11.7138 18.961 11.8555 19 12 19C12.1445 19 12.2862 18.961 12.4096 18.8873C19.3 14.7305 20 10.6185 20 8.88594C20 6.73964 18.2088 5 16 5C13.7912 5 12 7.35511 12 7.35511C12 7.35511 10.2088 5 8 5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton viewIcon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.2565 10.962C21.7305 11.582 21.7305 12.419 21.2565 13.038C19.7635 14.987 16.1815 19 11.9995 19C7.81752 19 4.23552 14.987 2.74252 13.038C2.51191 12.7411 2.38672 12.3759 2.38672 12C2.38672 11.6241 2.51191 11.2589 2.74252 10.962C4.23552 9.013 7.81752 5 11.9995 5C16.1815 5 19.7635 9.013 21.2565 10.962V10.962Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    `;
 
     this.innerHTML = `
             <div class="cardContainer">
                 
                 <div class="imageWrapper">
-                    ${discountBadgeHtml}
+                    ${discountBadge}
+                    ${newBadge}
                     <img class="productImage" src="${image}" alt="">
-
-                    <div class="hoverIcons">
-                        <button class="iconButton heartIcon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 5C5.7912 5 4 6.73964 4 8.88594C4 10.6185 4.7 14.7305 11.5904 18.8873C11.7138 18.961 11.8555 19 12 19C12.1445 19 12.2862 18.961 12.4096 18.8873C19.3 14.7305 20 10.6185 20 8.88594C20 6.73964 18.2088 5 16 5C13.7912 5 12 7.35511 12 7.35511C12 7.35511 10.2088 5 8 5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                        
-                        </button>
-                        <button class="iconButton viewIcon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.2565 10.962C21.7305 11.582 21.7305 12.419 21.2565 13.038C19.7635 14.987 16.1815 19 11.9995 19C7.81752 19 4.23552 14.987 2.74252 13.038C2.51191 12.7411 2.38672 12.3759 2.38672 12C2.38672 11.6241 2.51191 11.2589 2.74252 10.962C4.23552 9.013 7.81752 5 11.9995 5C16.1815 5 19.7635 9.013 21.2565 10.962V10.962Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                        </button>
-                    </div>
+                    ${buttons}
 
                     <button class="addToCartBtn">Add To Cart</button>
                 </div>
