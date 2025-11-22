@@ -19,36 +19,6 @@
   position: relative;
 }
 
-.discountBadge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #db4444;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.newBadge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #2ecc71;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.imageWrapper:has(.discountBadge) .newBadge {
-  top: 45px;
-}
-
 .productImage {
   width: 60%;
   height: auto;
@@ -140,13 +110,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.originalPrice {
-  color: #999;
-  font-weight: 400;
-  text-decoration: line-through;
-  font-size: 14px;
 }
 
 .priceText {
