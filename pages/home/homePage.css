@@ -1,3 +1,18 @@
+.heroVideo {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 600px;
+  margin: 0 auto;       
+  overflow: hidden;
+}
+
+.heroVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .discoveryArea {
   padding-inline: var(--padding);
   max-width: var(--max-width);
@@ -83,12 +98,14 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .flashSalesContainer {
   display: flex;
   align-items: flex-end;
   gap: 80px;
   flex-wrap: wrap;
 }
+
 .flashSalesTitle {
   font-size: 36px;
   font-weight: 600;
@@ -280,6 +297,7 @@
   color: #000;
   text-align: center;
 }
+
 .promoBannerSection {
   width: 100%;
   height: 400px;
@@ -291,6 +309,7 @@
   justify-content: space-between;
   gap: 10px;
 }
+
 .bannerContent {
   width: 45%;
   color: white;
@@ -298,19 +317,23 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .bannerContent span {
   color: #00ff66;
   font-size: 16px;
   font-weight: 600;
 }
+
 .bannerTitle {
   font-size: 48px;
   font-weight: 600;
 }
+
 .bannerTimeContainer {
   display: flex;
   gap: 20px;
 }
+
 .time {
   display: flex;
   flex-direction: column;
@@ -321,16 +344,19 @@
   width: 60px;
   height: 60px;
 }
+
 .time h6 {
   font-size: 16px;
   font-weight: 600;
   color: black;
 }
+
 .time span {
   font-size: 11px;
   font-weight: 400px;
   color: black;
 }
+
 .buyButton {
   background-color: #00ff66;
   border-radius: 4px;
@@ -339,22 +365,26 @@
   border: none;
   width: 200px;
 }
+
 .bannerImage {
   width: 600px;
   height: 500px;
   filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.5));
 }
+
 .exploreSection {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
+
 .sectionIntro {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .sectionIndicator {
   height: 50px;
   display: flex;
@@ -375,22 +405,27 @@
   z-index: 1;
   transition: width 0.3s ease-in-out;
 }
+
 .sectionIndicator:hover .redBar {
   width: 100%;
 }
+
 .sectionIndicator:hover h4 {
   color: white;
   z-index: 3;
 }
+
 .sectionIndicator h4 {
   position: relative;
   padding-left: 40px;
   color: #db4444;
 }
+
 .exploreSectionTitle {
   font-size: 36px;
   font-weight: 600;
 }
+
 .exploreProductCards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -399,6 +434,7 @@
   column-gap: 20px;
   row-gap: 30px;
 }
+
 .viewProductsBtn {
   background-color: #db4444;
   padding: 15px;
@@ -408,6 +444,7 @@
   color: white;
   align-self: center;
 }
+
 .newArrivalSection {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -415,6 +452,7 @@
   flex-direction: column;
   gap: 50px;
 }
+
 .productCollectionsContainer {
   display: grid;
   gap: 30px;
@@ -423,11 +461,13 @@
     "playStation playStation womens womens"
     "playStation playStation speakers perfume";
 }
+
 .collection {
   background-color: black;
   color: white;
   position: relative;
 }
+
 .collectionContent {
   position: absolute;
   bottom: 20px;
@@ -439,12 +479,15 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .collectionContent p {
   font-size: 14px;
 }
+
 .collectionContent a {
   color: white;
 }
+
 .collection img {
   position: absolute;
   top: 10px;
@@ -454,63 +497,79 @@
   z-index: 1;
   object-fit: contain;
 }
+
 .womensCollection img {
   right: 0;
   left: auto;
 }
+
 .playStationCollection {
   grid-area: playStation;
 }
+
 .womensCollection {
   grid-area: womens;
 }
+
 .speakersCollection {
   grid-area: speakers;
 }
+
 .perfumeCollection {
   grid-area: perfume;
 }
+
 @media (max-width: 75em) {
   .exploreProductCards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .bestSellingCards {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .flashSalesCards {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .categoryCardsContainer {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .flashSalesContainer {
     gap: 10px;
   }
 }
+
 @media (max-width: 69.4em) {
   .discoveryArea {
     padding-inline: 20px;
   }
+
   .promoBannerSection {
     height: auto;
     flex-direction: column;
     align-self: center;
   }
+
   .bannerContent {
     width: 90%;
     align-items: center;
     gap: 15px;
   }
+
   .bannerTitle {
     font-size: 30px;
     text-align: center;
   }
+
   .bannerImage {
     width: 50%;
     height: 50%;
     max-height: 400px;
     margin-top: 20px;
   }
+
   .time span {
     font-size: 8px;
   }
@@ -522,6 +581,7 @@
       "womens womens"
       "speakers perfume";
   }
+
   .collection img {
     width: 50%;
     height: 70%;
@@ -529,6 +589,7 @@
     object-fit: contain;
     margin: auto;
   }
+
   .collection {
     display: flex;
     flex-direction: column;
@@ -536,6 +597,7 @@
     padding: 20px;
     height: 350px;
   }
+
   .collectionContent {
     position: static;
     width: 90%;
@@ -549,13 +611,16 @@
   .bannerTitle {
     font-size: 32px;
   }
+
   .time {
     width: 45px;
     height: 45px;
   }
+
   .time h6 {
     font-size: 14px;
   }
+
   .time span {
     font-size: 9px;
   }
@@ -563,41 +628,53 @@
   .exploreSectionTitle {
     font-size: 28px;
   }
+
   .bestSellingTitle {
     font-size: 28px;
   }
+
   .flashSalesTitle {
     font-size: 28px;
   }
+
   .browseCategoryTitle {
     font-size: 28px;
   }
+
   .timerValue {
     font-size: 24px;
   }
+
   .timerSeparator {
     font-size: 24px;
   }
+
   .exploreProductCards {
     grid-template-columns: 1fr 1fr;
   }
+
   .bestSellingCards {
     grid-template-columns: 1fr 1fr;
   }
+
   .flashSalesCards {
     grid-template-columns: 1fr 1fr;
   }
+
   .categoryCardsContainer {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .bestSellingHeader {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .flashSalesHeader {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .browseCategoryHeader {
     flex-direction: column;
     align-items: flex-start;
@@ -612,44 +689,56 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .collection {
     height: 300px;
     justify-content: center;
   }
+
   .collection img {
     width: 70%;
   }
 }
+
 @media (max-width: 33em) {
   .exploreProductCards {
     grid-template-columns: 1fr;
   }
+
   .bestSellingCards {
     grid-template-columns: 1fr;
   }
+
   .flashSalesCards {
     grid-template-columns: 1fr;
   }
+
   .categoryCardsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .timerValue {
     font-size: 20px;
   }
+
   .timerSeparator {
     font-size: 20px;
   }
+
   .timerLabel {
     font-size: 10px;
   }
+
   .flashSalesRight {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
+
   .bannerTimeContainer {
     gap: 10px;
   }
+
   .time {
     width: 40px;
     height: 40px;
