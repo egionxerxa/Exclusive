@@ -118,8 +118,9 @@
 
 .timerLabel {
   font-size: 12px;
-  font-weight: 500;
-  color: #666;
+  font-weight: 400;
+  color: #000;
+  font-family: sans-serif;
 }
 
 .timerValue {
@@ -130,11 +131,13 @@
 }
 
 .timerSeparator {
-  font-size: 32px;
-  font-weight: 700;
-  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ff6b9d;
   margin: 0 4px;
   line-height: 1;
+  align-self: flex-end;
+  padding-bottom: 8px;
 }
 
 .flashSalesNavigation {
