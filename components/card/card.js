@@ -1,18 +1,25 @@
 class CardComponent extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        const image = this.getAttribute("image");
-        const title = this.getAttribute("productTitle");
-        const price = this.getAttribute("price");
-        const stars = this.getAttribute("stars");
+  render() {
+    const image = this.getAttribute("image");
+    const title = this.getAttribute("productTitle");
+    const price = this.getAttribute("price");
+    const originalPrice = this.getAttribute("originalPrice");
+    const stars = this.getAttribute("stars");
+    const discount = this.getAttribute("discount");
 
-        this.innerHTML = `
+    const originalPriceHtml = originalPrice ? `<span class="originalPrice">${originalPrice}</span>` : "";
+
+    const discountBadgeHtml = discount ? `<div class="discountBadge">-${discount}%</div>` : "";
+
+    this.innerHTML = `
             <div class="cardContainer">
                 
                 <div class="imageWrapper">
+                    ${discountBadgeHtml}
                     <img class="productImage" src="${image}" alt="">
 
                     <div class="hoverIcons">
@@ -38,6 +45,7 @@ class CardComponent extends HTMLElement {
                 <div class="cardBody">
                     <div class="productTitle">${title}</div>
                     <div class="priceRow">
+                        ${originalPriceHtml}
                         <span class="priceText">${price}</span>
                     </div>
                     <div class="starsRow">
@@ -47,8 +55,7 @@ class CardComponent extends HTMLElement {
 
             </div>
         `;
-    }
+  }
 }
 
 customElements.define("product-card", CardComponent);
-

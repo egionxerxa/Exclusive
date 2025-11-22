@@ -1,10 +1,282 @@
 .discoveryArea {
-  padding: var(--padding);
+  padding-inline: var(--padding);
   max-width: var(--max-width);
   margin-inline: auto;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 50px 0;
+}
+
+.bestSellingSection {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.bestSellingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.bestSellingIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bestSellingTitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.viewAllBtn {
+  background-color: #db4444;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.viewAllBtn:hover {
+  background-color: #c03939;
+}
+
+.bestSellingCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.flashSalesSection {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.flashSalesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flashSalesIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flashSalesContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+.flashSalesTitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.flashSalesRight {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.countdownTimer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.timerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.timerLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+}
+
+.timerValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+.timerSeparator {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 4px;
+  line-height: 1;
+}
+
+.flashSalesNavigation {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.flashSalesCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.flashSalesButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.viewAllProductsBtn {
+  background-color: #db4444;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewAllProductsBtn:hover {
+  background-color: #c03939;
+}
+
+.browseCategorySection {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.browseCategoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.browseCategoryIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.browseCategoryTitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.categoryNavigation {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.navArrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navArrow:hover {
+  background: #f5f5f5;
+  border-color: #db4444;
+}
+
+.navArrow svg {
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+
+.navArrow:hover svg {
+  color: #db4444;
+}
+
+.categoryCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.categoryCard {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryCard:hover {
+  border-color: #db4444;
+  background: #f5f5f5;
+}
+
+.categoryIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.categoryName {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
 }
 .promoBannerSection {
   width: 100%;
@@ -200,6 +472,18 @@
   .exploreProductCards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .bestSellingCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .flashSalesCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .categoryCardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .flashSalesContainer {
+    gap: 10px;
+  }
 }
 @media (max-width: 69.4em) {
   .discoveryArea {
@@ -277,8 +561,44 @@
   .exploreSectionTitle {
     font-size: 28px;
   }
+  .bestSellingTitle {
+    font-size: 28px;
+  }
+  .flashSalesTitle {
+    font-size: 28px;
+  }
+  .browseCategoryTitle {
+    font-size: 28px;
+  }
+  .timerValue {
+    font-size: 24px;
+  }
+  .timerSeparator {
+    font-size: 24px;
+  }
   .exploreProductCards {
     grid-template-columns: 1fr 1fr;
+  }
+  .bestSellingCards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .flashSalesCards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .categoryCardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bestSellingHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flashSalesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .browseCategoryHeader {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .productCollectionsContainer {
@@ -301,6 +621,29 @@
 @media (max-width: 33em) {
   .exploreProductCards {
     grid-template-columns: 1fr;
+  }
+  .bestSellingCards {
+    grid-template-columns: 1fr;
+  }
+  .flashSalesCards {
+    grid-template-columns: 1fr;
+  }
+  .categoryCardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .timerValue {
+    font-size: 20px;
+  }
+  .timerSeparator {
+    font-size: 20px;
+  }
+  .timerLabel {
+    font-size: 10px;
+  }
+  .flashSalesRight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
   .bannerTimeContainer {
     gap: 10px;
