@@ -10,7 +10,7 @@ class CardComponent extends HTMLElement {
     const stars = this.getAttribute("stars");
 
     this.innerHTML = `
-            <div class="cardContainer">
+            <div id="productCard" class="cardContainer">
                 
                 <div class="imageWrapper">
                     <img class="productImage" src="${image}" alt="">
