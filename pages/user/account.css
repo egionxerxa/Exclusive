@@ -22,9 +22,9 @@ html {
   padding-top: 60px;
   padding-bottom: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 150px;
+  gap: 20px;
 }
 .deviceImage {
   width: 60%;

@@ -26,7 +26,7 @@ class HeaderComponent extends HTMLElement {
               50%!
             </p>
             <p class="shortSaleBanner">Summer Sale 50%</p>
-            <a href="#" class="shopNowBtn">Shop Now</a>
+            <a href="../../pages/pageNotFound/pageNotFound.html" class="shopNowBtn">Shop Now</a>
           </div>
           <div class="languageSelect">
             <label for="">English</label>

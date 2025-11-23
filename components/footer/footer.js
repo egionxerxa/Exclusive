@@ -1,10 +1,10 @@
 class FooterComponent extends HTMLElement {
-    connectedCallback() {
-        this.render()
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `       
+  render() {
+    this.innerHTML = `       
             <footer class="footer">
         <div class="footerContainer">
 
@@ -49,10 +49,10 @@ class FooterComponent extends HTMLElement {
             <div class="footerSection">
                 <h3>Quick Link</h3>
                 <ul class="quickList">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Use</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../../pages/pageNotFound/pageNotFound.html">Privacy Policy</a></li>
+                    <li><a href="../../pages/pageNotFound/pageNotFound.html">Terms Of Use</a></li>
+                    <li><a href="../../pages/pageNotFound/pageNotFound.html">FAQ</a></li>
+                    <li><a href="../../pages/pageNotFound/pageNotFound.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -194,10 +194,8 @@ class FooterComponent extends HTMLElement {
             © Copyright Rimel 2022. All right reserved
         </div>
     </footer>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('custom-footer', FooterComponent)
-
-
+customElements.define("custom-footer", FooterComponent);
