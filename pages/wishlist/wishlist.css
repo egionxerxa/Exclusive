@@ -1,8 +1,8 @@
 .container {
-  max-width: var(--max-width);
-  padding-inline: var(--padding);
-  margin-inline: auto;
-  margin: 100px 0;
+  width: 100%;
+  max-width: var(--max-width);    
+  margin: 100px auto;            
+  padding-inline: 100px;          
 }
 
 .moveBtn,

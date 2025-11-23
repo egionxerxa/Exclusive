@@ -21,11 +21,6 @@
   margin: 0 5px;
 }
 
-.breadcrumb .current-page {
-  color: black;
-  font-weight: 600;
-}
-
 .checkoutContainer {
   display: flex;
   justify-content: space-between;

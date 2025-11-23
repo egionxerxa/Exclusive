@@ -8,6 +8,23 @@ html {
   --max-width: 1600px;
   --padding: 135px;
 }
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 35px;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #555;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+  color: #8c8c8c;
+}
+
 .pageNotFoundContainer {
   max-width: var(--max-width);
   margin-inline: auto;
@@ -238,6 +255,7 @@ html {
 .socialIcons {
   color: #007bff;
 }
+
 .dots {
   text-align: center;
   margin-top: 20px;
