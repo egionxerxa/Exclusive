@@ -10,7 +10,8 @@ html {
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../assets/font/Inter-VariableFont_opsz\,wght.ttf") format("woff2");
+  src: url("../../assets/font/Inter-VariableFont_opsz\,wght.ttf")
+    format("woff2");
 }
 header {
   max-width: var(--max-width);
@@ -122,6 +123,9 @@ header {
   height: 30px;
   width: 30px;
   cursor: pointer;
+}
+.headerSvgContainer a {
+  text-decoration: none;
 }
 .responsiveHeader svg {
   height: 16px;
