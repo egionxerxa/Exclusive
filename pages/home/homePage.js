@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftBtn = document.querySelector(".flashSalesNavigation .navArrowLeft");
   const rightBtn = document.querySelector(".flashSalesNavigation .navArrowRight");
 
-  const cards = Array.from(slider.querySelectorAll("#productCard"));
+  const cards = Array.from(slider.querySelectorAll(".productCard"));
 
   cards.forEach((card) => {
     slider.appendChild(card.cloneNode(true));
@@ -32,11 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isAtEnd) {
       slider.style.scrollBehavior = "auto";
       slider.scrollLeft = startPosition + 50;
-      slider.style.scrollBehavior = "smooth";
     } else if (isAtStart) {
       slider.style.scrollBehavior = "auto";
       slider.scrollLeft = startPosition + realCardsWidth - 50;
-      slider.style.scrollBehavior = "smooth";
     }
   });
 
