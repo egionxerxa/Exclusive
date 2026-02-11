@@ -1,215 +1,302 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html {
-    --max-width: 1600px;
-    --padding: 135px;
-}
-
 .footer {
-    max-width: var(--max-width);
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    background: #000;
-    color: #fff;
-    padding: 60px 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: clamp(56px, 7vw, 80px) var(--content-padding) clamp(32px, 4vw, 48px);
+  border-top: 2px solid rgba(184, 69, 69, 0.18);
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 15%, var(--accent) 85%, transparent 100%);
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .footerContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 60px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: clamp(32px, 4vw, 56px);
+  width: 100%;
+  max-width: var(--max-width);
+  align-items: start;
+}
+
+.footerFollow {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 8px;
+  border-top: 1px solid var(--footer-border);
+}
+
+.footerFollow .footerFollowTitle {
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--footer-heading);
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerSection:first-child {
+  max-width: 280px;
 }
 
 .footerSection h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 18px;
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 600;
+  color: var(--footer-heading);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 .sectionTitle {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--footer-heading);
+  margin-bottom: 8px;
+  margin-top: 0;
 }
 
 .smallText {
-    font-size: 14px;
-    margin-bottom: 14px;
-    font-weight: 300;
+  font-size: 14px;
+  color: var(--footer-text);
+  margin-bottom: 16px;
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
 .footerSection ul {
-    list-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footerSection ul li,
+.footerSection ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--footer-text);
+}
+
+.footerSection ul li:last-child {
+  margin-bottom: 0;
+}
+
 .footerSection ul li a {
-    font-size: 14px;
-    color: #fff;
-    text-decoration: none;
-    line-height: 28px;
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footerSection ul li a:hover {
+  color: var(--accent);
+  transform: translateX(4px);
 }
 
 .subscribeForm {
-    display: flex;
-    align-items: center;
-    border: 1px solid #333;
-    padding: 6px 10px;
-    border-radius: 6px;
-    width: 220px;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--footer-border);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribeForm:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(184, 69, 69, 0.12);
 }
 
 .subscribeForm input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    color: #fff;
-    outline: none;
-    font-size: 14px;
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--footer-heading);
+  outline: none;
+  font-size: 14px;
+  padding: 12px 16px;
+}
+
+.subscribeForm input::placeholder {
+  color: var(--text-muted);
 }
 
 .sendButton {
-    background: none;
-    display: flex;
-    align-items: center;
-    border: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  flex-shrink: 0;
+  border: none;
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.qrContainer {
-    display: flex;
-    gap: 14px;
-    margin-top: 10px;
+.sendButton:hover {
+  background: var(--accent-hover);
+  transform: scale(1.03);
 }
 
-.qrImage {
-    width: 76px;
-    height: 76px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sendButton:active {
+  transform: scale(0.98);
 }
 
-.appImages {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.sendButton svg {
+  width: 20px;
+  height: 20px;
 }
 
-.googlePlay,
-.appleStore {
-    width: 110px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sendButton svg path {
+  stroke: currentColor;
 }
 
 .socialIcons {
-    display: flex;
-    gap: 18px;
-    margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-.icon {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--footer-text);
+  border: 1px solid var(--footer-border);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(184, 69, 69, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.socialIcons .icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons .icon svg {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.socialIcons .icon svg path,
+.socialIcons .icon svg circle {
+  stroke: currentColor !important;
+  fill: currentColor !important;
 }
 
 .footerBottom {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 14px;
-    padding-top: 20px;
-    border-top: 1px solid #222;
+  text-align: center;
+  margin-top: clamp(40px, 5vw, 56px);
+  padding-top: 24px;
+  border-top: 1px solid var(--footer-border);
+  width: 100%;
+  max-width: var(--max-width);
+  font-size: 14px;
+  color: var(--footer-text);
+  opacity: 0.9;
 }
 
-@media (max-width: 1024px) {
-    .footer {
-        padding: 50px 40px;
-    }
+@media (max-width: 1200px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
 
-    .footerContainer {
-        gap: 40px;
-    }
-
-    .googlePlay,
-    .appleStore {
-        width: 95px;
-        height: 32px;
-    }
-
-    .qrImage {
-        width: 65px;
-        height: 65px;
-    }
+  .footerSection:first-child {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px;
-    }
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
 
-    .footerContainer {
-        flex-direction: column;
-        gap: 40px;
-    }
+  .footerSection:first-child {
+    grid-column: 1 / -1;
+  }
 
-    .footerSection h3 {
-        font-size: 16px;
-    }
+  .footerSection:nth-child(3) {
+    grid-column: 1;
+  }
 
-    .smallText,
-    .footerSection ul li,
-    .footerSection ul li a {
-        font-size: 13px;
-    }
+  .footerSection:nth-child(4) {
+    grid-column: 2;
+  }
 
-    .subscribeForm {
-        width: 100%;
-    }
+  .subscribeForm {
+    max-width: 100%;
+  }
 
-    .qrContainer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .qrImage {
-        width: 60px;
-        height: 60px;
-    }
-
-    .googlePlay,
-    .appleStore {
-        width: 90px;
-        height: 30px;
-    }
+  .footerFollow .socialIcons {
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 480px) {
-    .footerBottom {
-        font-size: 12px;
-    }
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
 
-    .icon {
-        width: 18px;
-        height: 18px;
-    }
+  .footerSection,
+  .footerSection:first-child {
+    align-items: center;
+    text-align: center;
+    grid-column: 1;
+  }
+
+  .subscribeForm {
+    width: 100%;
+  }
+
+  .footerFollow .socialIcons {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    font-size: 13px;
+  }
 }
-
-
-
-
-
-

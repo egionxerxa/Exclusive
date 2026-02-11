@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../components/footer/footer.css" />
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
-    <link rel="stylesheet" href="../../pages/profile/profilePage.css" />
+    <link rel="stylesheet" href="../../pages/profile/profile.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -16,8 +16,8 @@
     <title>Exclusive - Profile Page</title>
   </head>
   <body>
+    <custom-header></custom-header>
     <div class="container">
-      <custom-header></custom-header>
       <section class="siteIntro">
         <p class="path">Home / <span>My Account</span></p>
         <p class="greeting">Welcome! <span>Md Rimel</span></p>
@@ -29,15 +29,15 @@
             <h4>Manage My Account</h4>
             <ul class="sideMenuList">
               <li>
-                <a href="../../pages/pageNotFound/pageNotFound.html">List</a>
+                <a href="../../pages/pageNotFound/not-found.html">List</a>
               </li>
               <li>
-                <a href="../../pages/pageNotFound/pageNotFound.html"
+                <a href="../../pages/pageNotFound/not-found.html"
                   >Address Book</a
                 >
               </li>
               <li>
-                <a href="../../pages/pageNotFound/pageNotFound.html"
+                <a href="../../pages/pageNotFound/not-found.html"
                   >My Payment Optios</a
                 >
               </li>
@@ -48,12 +48,12 @@
             <h4>My Orders</h4>
             <ul class="sideMenuList">
               <li>
-                <a href="../../pages/pageNotFound/pageNotFound.html"
+                <a href="../../pages/pageNotFound/not-found.html"
                   >My Returns</a
                 >
               </li>
               <li>
-                <a href="../../pages/pageNotFound/pageNotFound.html"
+                <a href="../../pages/pageNotFound/not-found.html"
                   >My Cancellations</a
                 >
               </li>
@@ -65,7 +65,7 @@
           </div>
         </div>
 
-        <form class="editProfileForm">
+        <form class="editProfileForm" action="#" method="get">
           <h3>Edit Your Profile</h3>
 
           <div class="formContainer">
@@ -96,7 +96,6 @@
               <input type="text" placeholder="Confirm New Password" />
             </div>
           </div>
-          <!-- PLOTSOJ LINKAT -->
           <div class="formActions">
             <a href="#">Cancel</a>
             <button>Save Changes</button>
@@ -105,5 +104,8 @@
       </section>
     </div>
     <custom-footer></custom-footer>
+    <script>
+      document.querySelector(".editProfileForm")?.addEventListener("submit", function (e) { e.preventDefault(); });
+    </script>
   </body>
 </html>

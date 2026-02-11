@@ -9,7 +9,7 @@
     <script src="../../components/header/header.js"></script>
     <script src="../../components/footer/footer.js"></script>
     <link rel="stylesheet" href="../../pages/user/account.css" />
-    <link rel="stylesheet" href="../../pages/user/signUpPage.css" />
+    <link rel="stylesheet" href="../../pages/user/sign-up.css" />
     <script src="validation.js" defer></script>
     <link
       rel="icon"
@@ -18,8 +18,8 @@
     />
   </head>
   <body>
+    <custom-header></custom-header>
     <div class="container">
-      <custom-header></custom-header>
       <section class="content">
         <img
           src="../../assets/images/logInImage.jpg"
@@ -29,7 +29,7 @@
         <div class="formContainer">
           <h2 class="formTitle">Create an Account</h2>
           <p class="fromSubtext">Enter your details below</p>
-          <form class="mainForm" id="signupForm">
+          <form class="mainForm" id="signupForm" action="#" method="get">
             <input
               type="text"
               class="formInput"
@@ -50,7 +50,6 @@
               placeholder="Password"
             />
             <div class="signUpSubmit">
-              <!-- Plotso -->
               <button
                 type="submit"
                 href="#"
@@ -64,8 +63,7 @@
               </a>
               <div class="redirectLogin">
                 <p>Already have an account?</p>
-                <!-- Plotso -->
-                <a href="../../pages/user/logInPage.html">Log in</a>
+                <a href="../../pages/user/login.html">Log in</a>
               </div>
             </div>
           </form>

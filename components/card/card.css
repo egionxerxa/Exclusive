@@ -1,68 +1,95 @@
 .cardContainer {
-  width: 220px;
-  height: 260px;
-  border-radius: 12px;
+  width: 100%;
+  min-width: 260px;
+  max-width: 320px;
+  border-radius: 14px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm, 0 2px 12px rgba(0, 0, 0, 0.06));
   position: relative;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s ease, border-color 0.25s ease, background 0.35s ease;
+}
+.cardContainer:hover {
+  box-shadow: var(--shadow-md, 0 8px 24px rgba(0, 0, 0, 0.12));
+  border-color: var(--border-color);
+  transform: translateY(-4px);
 }
 
+.cardContainer:hover .hoverIcons {
+  opacity: 1;
+}
 .imageWrapper {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 1;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f5f5;
+  background: var(--bg-input);
   position: relative;
+  padding: 16px;
+  transition: background 0.35s ease;
 }
-
 .productImage {
-  width: 60%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 85%;
+  max-height: 85%;
   object-fit: contain;
+  object-position: center;
 }
 
 .hoverIcons {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 }
 
 .iconButton {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: var(--bg-card);
+  color: var(--card-icon);
   cursor: pointer;
   outline: none;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
 }
-
-.iconButton:focus,
+.iconButton:hover {
+  background: var(--border-color);
+  color: var(--text-primary);
+  transform: scale(1.08);
+}
+.iconButton:focus {
+  outline: none;
+  border: none;
+}
 .iconButton:active {
   outline: none;
   border: none;
-  box-shadow: none;
+  transform: scale(0.95);
 }
-
 .iconButton svg {
   width: 20px;
   height: 20px;
   pointer-events: none;
-  outline: none;
-  border: none;
-  box-shadow: none;
+  stroke: currentColor;
+  transition: stroke 0.25s ease;
 }
 
 .addToCartBtn {
@@ -70,26 +97,32 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 12px 0;
-  background: #000;
-  color: #fff;
+  padding: 14px;
+  background: var(--text-primary);
+  color: var(--bg-card);
   font-size: 15px;
+  font-weight: 500;
   text-align: center;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(8px);
   outline: none;
   border: none;
-  box-shadow: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease, color 0.25s ease;
+  z-index: 2;
 }
-
+.addToCartBtn:hover {
+  filter: brightness(0.9);
+  transform: translateY(0) scale(1.02);
+}
+.addToCartBtn:active {
+  transform: translateY(0) scale(0.98);
+}
 .addToCartBtn:focus,
 .addToCartBtn:active {
   outline: none;
   border: none;
-  box-shadow: none;
 }
-
 .cardContainer:hover .hoverIcons,
 .cardContainer:hover .addToCartBtn {
   opacity: 1;
@@ -97,31 +130,40 @@
 }
 
 .cardBody {
-  padding: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
 }
-
 .productTitle {
-  font-size: 16px;
+  font-size: clamp(15px, 1.1vw, 17px);
   font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+  transition: color 0.25s ease;
 }
-
 .priceRow {
-  margin-top: 5px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
-
 .priceText {
-  color: #e63946;
+  color: var(--accent);
   font-weight: 700;
+  font-size: clamp(15px, 1vw, 16px);
+  transition: color 0.25s ease;
 }
-
 .starsRow {
-  margin-top: 5px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #999;
-  font-size: 14px;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: color 0.25s ease;
+}
+
+.productCard.cardContainer {
+  justify-self: stretch;
+  max-width: none;
 }

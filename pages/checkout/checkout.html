@@ -33,7 +33,7 @@
       <div class="checkoutContainer">
         <div class="billingDetails">
           <h2>Billing Details</h2>
-          <form class="billingForm">
+          <form class="billingForm" action="#" method="get">
             <div class="input">
               <label>First Name*</label>
               <input type="text" />
@@ -138,5 +138,8 @@
     </div>
 
     <custom-footer></custom-footer>
+    <script>
+      document.querySelector(".billingForm")?.addEventListener("submit", function (e) { e.preventDefault(); });
+    </script>
   </body>
 </html>

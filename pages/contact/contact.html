@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <form class="contactForm">
+        <form class="contactForm" action="#" method="get">
           <div class="inputRow">
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
@@ -96,11 +96,14 @@
 
           <textarea placeholder="Your Message"></textarea>
 
-          <button class="sendBtn">Send Message</button>
+          <button class="sendBtn" type="submit">Send Message</button>
         </form>
       </section>
     </div>
 
     <custom-footer></custom-footer>
+    <script>
+      document.querySelector(".contactForm")?.addEventListener("submit", function (e) { e.preventDefault(); });
+    </script>
   </body>
 </html>

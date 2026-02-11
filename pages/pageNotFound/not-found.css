@@ -37,7 +37,7 @@
 }
 .backToHomeButton {
   padding: 16px;
-  background-color: #db4444;
+  background-color: var(--accent);
   border: none;
   border-radius: 4px;
   text-decoration: none;

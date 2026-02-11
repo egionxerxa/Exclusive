@@ -8,7 +8,7 @@ plusBtn.addEventListener("click", () => {
   if (currentVlaue < parseInt(quantityInput.max)) {
     quantityInput.value = currentVlaue + 1;
   }
-  plusBtn.style.backgroundColor = "#db4444";
+  plusBtn.style.backgroundColor = "#b84545";
   plusBtn.style.color = "white";
   minusBtn.style.backgroundColor = "white";
   minusBtn.style.color = "black";
@@ -19,7 +19,7 @@ minusBtn.addEventListener("click", () => {
   if (currentVlaue > parseInt(quantityInput.min)) {
     quantityInput.value = currentVlaue - 1;
   }
-  minusBtn.style.backgroundColor = "#db4444";
+  minusBtn.style.backgroundColor = "#b84545";
   minusBtn.style.color = "white";
   plusBtn.style.backgroundColor = "white";
   plusBtn.style.color = "black";

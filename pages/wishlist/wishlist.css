@@ -1,8 +1,8 @@
 .container {
   width: 100%;
-  max-width: var(--max-width);    
-  margin: 100px auto;            
-  padding-inline: 100px;          
+  max-width: var(--max-width);
+  margin: clamp(40px, 6vw, 80px) auto;
+  padding-inline: var(--content-padding, 24px);
 }
 
 .moveBtn,
@@ -17,10 +17,13 @@
 
 .productsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
   margin-bottom: 40px;
-  justify-items: center;
+  justify-items: stretch;
+}
+.productsGrid .cardContainer {
+  max-width: none;
 }
 
 .wishlistHeader {
@@ -55,7 +58,7 @@
 .redBar {
   height: 100%;
   width: 20px;
-  background-color: #db4444;
+  background-color: var(--accent);
   border-radius: 4px;
   position: absolute;
   left: 0;
@@ -76,7 +79,7 @@
 .sectionIndicator h4 {
   position: relative;
   padding-left: 40px;
-  color: #db4444;
+  color: var(--accent);
 }
 
 @media (max-width: 1100px) {

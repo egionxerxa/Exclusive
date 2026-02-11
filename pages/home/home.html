@@ -15,7 +15,7 @@
     <script src="../../components/footer/footer.js"></script>
     <script src="../../components/card/card.js"></script>
     <script src="../../components/aboutService/aboutService.js"></script>
-    <link rel="stylesheet" href="../../pages/home/homePage.css" />
+    <link rel="stylesheet" href="../../pages/home/home.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -27,15 +27,39 @@
   <body>
     <custom-header></custom-header>
 
-    <section class="heroVideo">
-      <video autoplay muted loop playsinline>
-        <source src="../../assets/videos/video_ad.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div class="trustStrip" aria-label="Benefits">
+      <div class="trustStripInner">
+        <span class="trustItem">
+          <svg class="trustIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Free delivery on orders over $50
+        </span>
+        <span class="trustItem">
+          <svg class="trustIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Free returns within 30 days
+        </span>
+        <span class="trustItem">
+          <svg class="trustIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Secure payment
+        </span>
+        <span class="trustItem">
+          <svg class="trustIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          24/7 customer support
+        </span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="heroBg"></div>
+      <div class="heroContent">
+        <p class="heroLabel">New season, new style</p>
+        <h1 class="heroTitle">Find your next favourite</h1>
+        <p class="heroSub">Free delivery on orders over $50. Easy returns. Real support.</p>
+        <a href="../../pages/home/home.html#flashSales" class="heroCta">Shop now</a>
+      </div>
     </section>
 
     <div class="discoveryArea">
-      <section class="flashSalesSection">
+      <section class="flashSalesSection" id="flashSales">
         <div class="flashSalesHeader">
           <div class="flashSalesIntro">
             <div class="sectionIndicator">
@@ -44,25 +68,25 @@
             </div>
             <div class="flashSalesContainer">
               <h2 class="flashSalesTitle">Flash Sales</h2>
-              <div class="countdownTimer">
+              <div class="countdownTimer" id="flashSalesCountdown">
                 <div class="timerItem">
                   <div class="timerLabel">Days</div>
-                  <div class="timerValue">03</div>
+                  <div class="timerValue" id="timerDays">03</div>
                 </div>
                 <div class="timerSeparator">:</div>
                 <div class="timerItem">
                   <div class="timerLabel">Hours</div>
-                  <div class="timerValue">23</div>
+                  <div class="timerValue" id="timerHours">23</div>
                 </div>
                 <div class="timerSeparator">:</div>
                 <div class="timerItem">
                   <div class="timerLabel">Minutes</div>
-                  <div class="timerValue">19</div>
+                  <div class="timerValue" id="timerMinutes">19</div>
                 </div>
                 <div class="timerSeparator">:</div>
                 <div class="timerItem">
                   <div class="timerLabel">Seconds</div>
-                  <div class="timerValue">56</div>
+                  <div class="timerValue" id="timerSeconds">56</div>
                 </div>
               </div>
             </div>
@@ -82,7 +106,7 @@
               >
                 <path
                   d="M11 5L4 12L11 19M4 12H20"
-                  stroke="currentColor"
+                  stroke="black"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -99,7 +123,7 @@
               >
                 <path
                   d="M3.5 12H20M20 12L13 5M20 12L13 19"
-                  stroke="currentColor"
+                  stroke="black"
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -519,6 +543,69 @@
             </div>
             <div class="categoryName">Gaming</div>
           </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="8" width="36" height="40" rx="2" stroke="black" stroke-width="2"/>
+                <line x1="18" y1="20" x2="38" y2="20" stroke="black" stroke-width="2"/>
+                <line x1="28" y1="28" x2="28" y2="40" stroke="black" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="categoryName">Tablets</div>
+          </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="28" cy="32" rx="14" ry="12" stroke="black" stroke-width="2"/>
+                <path d="M14 32V22a6 6 0 0112 0v10M26 32V24a4 4 0 018 0v8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="categoryName">Speakers</div>
+          </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="12" width="44" height="28" rx="2" stroke="black" stroke-width="2"/>
+                <path d="M20 44h16M28 44v-4" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="28" cy="26" r="4" stroke="black" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="categoryName">TV & Video</div>
+          </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 14v28M14 28h28" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="28" cy="28" r="8" stroke="black" stroke-width="2"/>
+                <path d="M28 8v4M28 44v4M8 28h4M44 28h4" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="categoryName">Accessories</div>
+          </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="20" width="40" height="14" rx="2" stroke="black" stroke-width="2"/>
+                <path d="M12 26h8M12 30h12M24 26h16" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="categoryName">Keyboards</div>
+          </div>
+
+          <div class="categoryCard">
+            <div class="categoryIcon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 22H38V38H18z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22V14a 4 4 0 0 1 8 0v8M28 30v8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="categoryName">Smart Home</div>
+          </div>
         </div>
       </section>
 
@@ -696,7 +783,7 @@
             <div class="collectionContent">
               <h3>PlayStation 5</h3>
               <p>Black and White version of the PS5 coming out on sale.</p>
-              <a href="../../pages/pageNotFound/pageNotFound.html">Shop Now</a>
+              <a href="../../pages/pageNotFound/not-found.html">Shop Now</a>
             </div>
           </div>
 
@@ -708,7 +795,7 @@
             <div class="collectionContent">
               <h3>Women’s Collections</h3>
               <p>Featured woman collections that give you another vibe.</p>
-              <a href="../../pages/pageNotFound/pageNotFound.html">Shop Now</a>
+              <a href="../../pages/pageNotFound/not-found.html">Shop Now</a>
             </div>
           </div>
 
@@ -717,7 +804,7 @@
             <div class="collectionContent">
               <h3>Speakers</h3>
               <p>Amazon wireless speakers</p>
-              <a href="../../pages/pageNotFound/pageNotFound.html">Shop Now</a>
+              <a href="../../pages/pageNotFound/not-found.html">Shop Now</a>
             </div>
           </div>
 
@@ -736,5 +823,5 @@
 
     <custom-footer></custom-footer>
   </body>
-  <script src="homePage.js"></script>
+  <script src="home.js"></script>
 </html>

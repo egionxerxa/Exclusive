@@ -1,6 +1,8 @@
 # Exclusive
 
-Welcome to our repo.
+A **frontend-only** showcase project. No backend or APIs—all forms and interactions are handled in the browser for demo purposes.
+
+**Entry point:** Open `start.html` in the project root to view the site; it redirects to the home page.
 
 ## Getting Started
 
