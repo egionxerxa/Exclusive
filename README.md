@@ -16,4 +16,4 @@ Make sure you have [Git](https://git-scm.com/) installed.
 
 1. Clone the repository:
 
-git clone https://github.com/egionxerxa/ICK-Projekt.git
+git clone https://github.com/egionxerxa/Exclusive.git
