@@ -5,37 +5,40 @@
 }
 
 .container {
-  max-width: 1170px;
-  margin: 50px auto;
-  padding: 0 15px;
+  max-width: var(--max-width, 1280px);
+  margin: clamp(24px, 4vw, 40px) auto;
+  padding: 0 var(--content-padding);
 }
 
 .breadcrumb {
-  font-size: 14px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  font-size: 12px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  color: var(--text-secondary);
 }
 
 .breadcrumb span {
-  color: #737373;
+  color: var(--text-muted);
   margin: 0 5px;
 }
 
 .checkoutContainer {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
-  margin: 20px 0;
+  gap: clamp(24px, 4vw, 48px);
+  margin: 16px 0;
 }
 
 .billingDetails {
   flex: 1;
+  min-width: 0;
 }
 
 .billingDetails h2 {
-  font-size: 36px;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .billingForm {
@@ -44,24 +47,25 @@
 }
 
 .input {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 
 .input label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #737373;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
 .input input[type="text"],
 .input input[type="email"] {
   width: 100%;
-  padding: 10px 15px;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  font-size: 14px;
-  background-color: #f5f5f5;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 13px;
+  background: var(--bg-input);
+  color: var(--text-primary);
 }
 
 .saveInfo {
@@ -121,21 +125,26 @@
 
 .orderSummary {
   flex: 1;
-  padding: 20px;
-  border-radius: 4px;
-  margin-top: 70px;
+  min-width: 0;
+  padding: clamp(16px, 2vw, 20px);
+  border-radius: 10px;
+  margin-top: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
 }
 
 .productsList {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .product {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--text-primary);
 }
 
 .productDetails {
@@ -280,7 +289,7 @@
 
 .applyCouponBtn:hover,
 .placeOrderBtn:hover {
-  background-color: #e07474;
+  background-color: var(--accent-hover);
 }
 
 @media (max-width: 480px) {

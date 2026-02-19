@@ -29,33 +29,45 @@
   flex: 1;
 }
 .notFoundHeading {
-  font-size: 6.5em;
+  font-size: clamp(3rem, 12vw, 5rem);
+  font-weight: 700;
   text-align: center;
+  color: var(--text-primary);
 }
 .notFoundSection p {
   text-align: center;
+  font-size: clamp(13px, 1.2vw, 14px);
+  color: var(--text-secondary);
 }
 .backToHomeButton {
-  padding: 16px;
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 500;
   background-color: var(--accent);
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
   color: white;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.backToHomeButton:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
 }
 @media screen and (max-width: 47.3em) {
   .notFoundHeading {
-    font-size: 5em;
+    font-size: clamp(2.5rem, 10vw, 4rem);
   }
   .path {
-    padding-inline: 20px;
+    padding-inline: var(--content-padding);
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 35.5em) {
   .notFoundHeading {
-    font-size: 3em;
+    font-size: 2.25rem;
   }
   .notFoundSection {
-    padding-inline: 20px;
+    padding-inline: var(--content-padding);
   }
 }

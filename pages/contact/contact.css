@@ -1,16 +1,16 @@
 .contactContainer {
     width: 100%;
-    max-width: 1300px;
+    max-width: var(--max-width, 1280px);
     margin: 0 auto;
-    padding: 40px var(--content-padding, 24px);
+    padding: clamp(24px, 3vw, 36px) var(--content-padding);
     background: var(--bg-page);
     color: var(--text-primary);
     transition: background 0.35s ease, color 0.25s ease;
 }
 
 .breadcrumb {
-    font-size: 14px;
-    margin-bottom: 35px;
+    font-size: 12px;
+    margin-bottom: 20px;
     color: var(--text-secondary);
     transition: color 0.25s ease;
 }
@@ -27,48 +27,48 @@
 
 .contactSection {
     display: flex;
-    gap: 50px;
+    gap: clamp(24px, 3vw, 40px);
     width: 100%;
     align-items: flex-start;
 }
 
 .contactCard {
-    width: 420px;
+    width: min(360px, 100%);
     max-width: 100%;
     background: var(--bg-card);
-    padding: 30px;
-    border-radius: 12px;
+    padding: clamp(20px, 2.5vw, 24px);
+    border-radius: 10px;
     border: 1px solid var(--border-light);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: background 0.35s ease, border-color 0.25s ease, box-shadow 0.35s ease;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    transition: background 0.35s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contactBlock {
     display: flex;
-    gap: 18px;
-    margin-bottom: 40px;
+    gap: 14px;
+    margin-bottom: 24px;
 }
 
 .iconCircle {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background: rgba(184, 69, 69, 0.12);
+    background: var(--bg-input);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .contactInfo h3 {
-    margin: 0 0 8px;
-    font-size: 17px;
+    margin: 0 0 6px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
 }
 
 .contactInfo p {
-    margin: 0 0 10px;
-    font-size: 14px;
+    margin: 0 0 8px;
+    font-size: 12px;
     color: var(--text-secondary);
 }
 
@@ -82,18 +82,19 @@
 
 .contactForm {
     flex: 1;
+    min-width: 0;
     background: var(--bg-card);
-    padding: 30px;
-    border-radius: 12px;
+    padding: clamp(20px, 2.5vw, 24px);
+    border-radius: 10px;
     border: 1px solid var(--border-light);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
     transition: background 0.35s ease, border-color 0.25s ease;
 }
 
 .inputRow {
     display: flex;
-    gap: 18px;
-    margin-bottom: 25px;
+    gap: 14px;
+    margin-bottom: 16px;
 }
 
 .inputRow input {
@@ -101,10 +102,10 @@
     background: var(--bg-input);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
-    padding: 14px 16px;
-    font-size: 15px;
-    border-radius: 8px;
-    transition: background 0.35s ease, border-color 0.25s ease, color 0.25s ease;
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    transition: border-color 0.25s ease, color 0.25s ease;
 }
 
 .inputRow input::placeholder {
@@ -113,16 +114,16 @@
 
 textarea {
     width: 100%;
-    height: 200px;
+    height: 140px;
     background: var(--bg-input);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
-    padding: 16px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 6px;
     resize: none;
-    font-size: 15px;
-    margin-bottom: 25px;
-    transition: background 0.35s ease, border-color 0.25s ease, color 0.25s ease;
+    font-size: 13px;
+    margin-bottom: 16px;
+    transition: border-color 0.25s ease, color 0.25s ease;
 }
 
 textarea::placeholder {
@@ -132,10 +133,11 @@ textarea::placeholder {
 .sendBtn {
     background: var(--accent);
     color: #fff;
-    padding: 14px 26px;
-    font-size: 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.25s ease, transform 0.2s ease;
 }

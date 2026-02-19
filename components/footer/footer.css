@@ -3,29 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  padding: clamp(56px, 7vw, 80px) var(--content-padding) clamp(32px, 4vw, 48px);
-  border-top: 2px solid rgba(184, 69, 69, 0.18);
+  background: var(--header-footer-bg);
+  color: var(--header-footer-text-muted);
+  padding: clamp(32px, 4vw, 48px) var(--content-padding) clamp(24px, 3vw, 32px);
+  border-top: 1px solid var(--header-footer-border);
   position: relative;
 }
 
 .footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, var(--accent) 15%, var(--accent) 85%, transparent 100%);
-  opacity: 0.25;
-  pointer-events: none;
+  display: none;
 }
 
 .footerContainer {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  gap: clamp(32px, 4vw, 56px);
+  gap: clamp(24px, 3vw, 40px);
   width: 100%;
   max-width: var(--max-width);
   align-items: start;
@@ -39,14 +31,14 @@
   text-align: center;
   padding-top: 24px;
   margin-top: 8px;
-  border-top: 1px solid var(--footer-border);
+  border-top: 1px solid var(--header-footer-border);
 }
 
 .footerFollow .footerFollowTitle {
   margin-bottom: 16px;
   font-size: 15px;
   font-weight: 600;
-  color: var(--footer-heading);
+  color: var(--header-footer-text);
 }
 
 .footerSection {
@@ -60,24 +52,24 @@
 }
 
 .footerSection h3 {
-  font-size: clamp(16px, 1.2vw, 18px);
+  font-size: clamp(14px, 1vw, 15px);
   font-weight: 600;
-  color: var(--footer-heading);
-  margin-bottom: 20px;
+  color: var(--header-footer-text);
+  margin-bottom: 12px;
   letter-spacing: -0.02em;
 }
 
-.sectionTitle {
+.footer .sectionTitle {
   font-size: 15px;
   font-weight: 600;
-  color: var(--footer-heading);
+  color: var(--header-footer-text);
   margin-bottom: 8px;
   margin-top: 0;
 }
 
-.smallText {
+.footer .smallText {
   font-size: 14px;
-  color: var(--footer-text);
+  color: var(--header-footer-text-muted);
   margin-bottom: 16px;
   line-height: 1.5;
   opacity: 0.95;
@@ -93,7 +85,7 @@
   margin-bottom: 10px;
   line-height: 1.5;
   font-size: 14px;
-  color: var(--footer-text);
+  color: var(--header-footer-text-muted);
 }
 
 .footerSection ul li:last-child {
@@ -101,109 +93,108 @@
 }
 
 .footerSection ul li a {
-  color: var(--footer-text);
+  color: var(--header-footer-text-muted);
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
   display: inline-block;
 }
 
 .footerSection ul li a:hover {
-  color: var(--accent);
+  color: var(--header-footer-text);
   transform: translateX(4px);
 }
 
-.subscribeForm {
+.footer .subscribeForm {
   display: flex;
   align-items: stretch;
   gap: 0;
-  border: 1px solid var(--footer-border);
+  border: 1px solid var(--header-footer-input-border);
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
   max-width: 280px;
-  background: #ffffff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  background: var(--header-footer-input-bg);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.subscribeForm:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(184, 69, 69, 0.12);
+.footer .subscribeForm:focus-within {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
-.subscribeForm input {
+.footer .subscribeForm input {
   flex: 1;
   border: none;
   background: transparent;
-  color: var(--footer-heading);
+  color: var(--header-footer-text);
   outline: none;
   font-size: 14px;
   padding: 12px 16px;
 }
 
-.subscribeForm input::placeholder {
-  color: var(--text-muted);
+.footer .subscribeForm input::placeholder {
+  color: var(--header-footer-text-muted);
 }
 
-.sendButton {
+.footer .sendButton {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   flex-shrink: 0;
   border: none;
-  background: var(--accent);
+  background: var(--header-footer-accent-on-dark);
   color: #ffffff;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.sendButton:hover {
-  background: var(--accent-hover);
+.footer .sendButton:hover {
+  background: var(--header-footer-accent-hover-on-dark);
   transform: scale(1.03);
 }
 
-.sendButton:active {
+.footer .sendButton:active {
   transform: scale(0.98);
 }
 
-.sendButton svg {
+.footer .sendButton svg {
   width: 20px;
   height: 20px;
 }
 
-.sendButton svg path {
+.footer .sendButton svg path {
   stroke: currentColor;
 }
 
-.socialIcons {
+.footer .socialIcons {
   display: flex;
   gap: 12px;
   margin-top: 20px;
 }
 
-.socialIcons a {
+.footer .socialIcons a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: #ffffff;
-  color: var(--footer-text);
-  border: 1px solid var(--footer-border);
+  background: var(--header-footer-input-bg);
+  color: var(--header-footer-text-muted);
+  border: 1px solid var(--header-footer-input-border);
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.socialIcons a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: rgba(184, 69, 69, 0.08);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.footer .socialIcons a:hover {
+  color: var(--header-footer-text);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.socialIcons .icon {
+.footer .socialIcons .icon {
   width: 20px;
   height: 20px;
   display: flex;
@@ -211,27 +202,27 @@
   justify-content: center;
 }
 
-.socialIcons .icon svg {
+.footer .socialIcons .icon svg {
   width: 20px;
   height: 20px;
   color: inherit;
 }
 
-.socialIcons .icon svg path,
-.socialIcons .icon svg circle {
+.footer .socialIcons .icon svg path,
+.footer .socialIcons .icon svg circle {
   stroke: currentColor !important;
   fill: currentColor !important;
 }
 
 .footerBottom {
   text-align: center;
-  margin-top: clamp(40px, 5vw, 56px);
-  padding-top: 24px;
-  border-top: 1px solid var(--footer-border);
+  margin-top: clamp(24px, 3vw, 36px);
+  padding-top: 16px;
+  border-top: 1px solid var(--header-footer-border);
   width: 100%;
   max-width: var(--max-width);
-  font-size: 14px;
-  color: var(--footer-text);
+  font-size: 12px;
+  color: var(--header-footer-text-muted);
   opacity: 0.9;
 }
 

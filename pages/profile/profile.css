@@ -9,8 +9,8 @@
 }
 .siteIntro {
   padding-inline: 0;
-  padding-top: 50px;
-  font-size: 14px;
+  padding-top: clamp(24px, 3vw, 36px);
+  font-size: 12px;
   display: flex;
   justify-content: space-between;
 }
@@ -23,6 +23,7 @@
 }
 .greeting {
   color: var(--text-primary);
+  font-size: 13px;
 }
 .greeting span {
   color: var(--accent);
@@ -30,32 +31,35 @@
 }
 .accountSection {
   padding-inline: 0;
-  margin-top: 50px;
+  margin-top: clamp(24px, 3vw, 36px);
   display: flex;
-  gap: 24px;
+  gap: 20px;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: clamp(40px, 6vw, 64px);
 }
 .accountSidebarMenu {
-  width: 25%;
+  width: 22%;
+  min-width: 160px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 .accountSidebarMenu h4 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
   color: var(--text-primary);
   transition: color 0.25s ease;
 }
 .sideMenuList {
-  padding-left: 35px;
+  padding-left: 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 .sideMenuList a {
   color: var(--text-secondary);
+  font-size: 13px;
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -63,27 +67,30 @@
   color: var(--accent);
 }
 .editProfileForm {
-  width: 70%;
-  padding-block: 40px;
-  padding-inline: 80px;
+  width: 72%;
+  min-width: 0;
+  padding-block: clamp(24px, 3vw, 32px);
+  padding-inline: clamp(24px, 3vw, 48px);
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   transition: background 0.35s ease, border-color 0.25s ease;
 }
 .editProfileForm h3 {
-  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
   transition: color 0.25s ease;
 }
 
 .formContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
   grid-template-areas:
     "firstName lastName"
     "email address"
@@ -92,9 +99,10 @@
 .inputBox {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 .inputBox label {
+  font-size: 12px;
   color: var(--text-primary);
   transition: color 0.25s ease;
 }
@@ -102,9 +110,10 @@
   background: var(--bg-input);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 12px;
-  transition: background 0.35s ease, border-color 0.25s ease, color 0.25s ease;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 13px;
+  transition: border-color 0.25s ease, color 0.25s ease;
 }
 .inputBox input::placeholder {
   color: var(--text-muted);
@@ -129,17 +138,20 @@
 .formActions {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 14px;
   align-items: center;
 }
 .formActions button {
-  width: 140px;
-  padding: 16px;
+  width: 120px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
   background-color: var(--accent);
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
   flex-shrink: 0;
+  cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease;
 }
 .formActions button:hover {
@@ -148,6 +160,7 @@
 }
 .formActions a {
   text-decoration: none;
+  font-size: 13px;
   color: var(--text-primary);
   transition: color 0.25s ease;
 }

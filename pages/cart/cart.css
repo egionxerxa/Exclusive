@@ -14,13 +14,13 @@ body {
 .cartPage {
   max-width: var(--max-width, 1280px);
   margin: 0 auto;
-  padding: clamp(28px, 4vw, 56px) var(--content-padding, 24px) 80px;
+  padding: clamp(20px, 3vw, 36px) var(--content-padding) clamp(40px, 5vw, 56px);
 }
 
 .cartBreadcrumb {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text-secondary);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   transition: color 0.25s ease;
 }
 
@@ -39,16 +39,16 @@ body {
 
 .cartHeader {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 100px 160px 110px;
-  gap: 24px 32px;
+  grid-template-columns: minmax(0, 1fr) 80px 120px 90px;
+  gap: 16px 20px;
   align-items: center;
-  padding: 16px 24px;
+  padding: 12px 18px;
   background: var(--bg-card);
-  border-radius: 12px;
-  margin-bottom: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
   border: 1px solid var(--border-light);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 11px;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -61,20 +61,20 @@ body {
 
 .cartRow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 100px 160px 110px;
-  gap: 24px 32px;
+  grid-template-columns: minmax(0, 1fr) 80px 120px 90px;
+  gap: 16px 20px;
   align-items: center;
-  padding: 24px;
+  padding: 16px 18px;
   background: var(--bg-card);
-  border-radius: 12px;
-  margin-bottom: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
   border: 1px solid var(--border-light);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .cartRow:hover {
   border-color: var(--border-color);
-  box-shadow: 0 4px 16px rgba(184, 69, 69, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .cartProduct {
@@ -85,10 +85,10 @@ body {
 }
 
 .cartImg {
-  width: 88px;
-  height: 88px;
+  width: 64px;
+  height: 64px;
   background: var(--bg-input);
-  border-radius: 10px;
+  border-radius: 8px;
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -117,7 +117,7 @@ body {
 
 .cartPrice {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-primary);
   text-align: right;
 }
@@ -144,13 +144,13 @@ body {
 
 .qtyInput:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(184, 69, 69, 0.12);
+  border-color: var(--text-muted);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
 .cartSubtotal {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-primary);
   text-align: right;
 }
@@ -204,12 +204,12 @@ body {
 }
 
 .couponInput {
-  width: 280px;
-  height: 50px;
+  width: min(240px, 100%);
+  height: 40px;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 0 18px;
-  font-size: 15px;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 13px;
   background: var(--bg-card);
   color: var(--text-primary);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -221,20 +221,20 @@ body {
 
 .couponInput:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(184, 69, 69, 0.1);
+  border-color: var(--text-muted);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
 .couponBtn {
-  height: 50px;
-  width: 160px;
+  height: 40px;
+  width: 120px;
   background: var(--accent);
   border: none;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
@@ -248,36 +248,36 @@ body {
 }
 
 .cartTotalBox {
-  width: 380px;
+  width: min(320px, 100%);
   max-width: 100%;
-  padding: 32px;
+  padding: 20px;
   border: 1px solid var(--border-light);
   background: var(--bg-card);
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 4px 20px rgba(184, 69, 69, 0.06);
+  gap: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cartTotalBox:hover {
-  border-color: rgba(184, 69, 69, 0.2);
+  border-color: var(--border-color);
 }
 
 .cartTotalBox h3,
 .cartTotalTitle {
   color: var(--text-primary);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .cartTotalRow {
   display: flex;
   justify-content: space-between;
   color: var(--text-primary);
-  font-size: 15px;
-  padding: 4px 0;
+  font-size: 13px;
+  padding: 2px 0;
 }
 
 .cartTotalRow span:last-child {
@@ -287,10 +287,10 @@ body {
 
 .totalRow {
   font-weight: 700;
-  font-size: 17px;
+  font-size: 14px;
   color: var(--text-primary);
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 6px;
+  margin-top: 6px;
   border-top: 1px solid var(--border-light);
 }
 
@@ -301,12 +301,12 @@ body {
   color: #fff;
   text-decoration: none;
   text-align: center;
-  border-radius: 10px;
-  padding: 18px 0;
-  margin-top: 20px;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-top: 14px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
@@ -320,15 +320,11 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .cartPage {
-    padding: 28px 20px 60px;
-  }
-
   .cartHeader,
   .cartRow {
-    grid-template-columns: 1fr 90px 140px 100px;
-    gap: 16px 20px;
-    padding: 16px 20px;
+    grid-template-columns: 1fr 70px 100px 80px;
+    gap: 12px 16px;
+    padding: 12px 16px;
   }
 
   .cartTotalBox {
@@ -417,8 +413,8 @@ body {
   }
 
   .cartImg {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
   }
 
   .returnBtn,

@@ -6,7 +6,7 @@
 .trustStrip {
   background: var(--white-soft, #fefcfb);
   border-bottom: 1px solid var(--border-light);
-  padding: 10px var(--content-padding);
+  padding: 6px var(--content-padding);
 }
 .trustStripInner {
   max-width: var(--max-width);
@@ -15,22 +15,24 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: clamp(16px, 4vw, 32px);
+  gap: clamp(12px, 2.5vw, 24px);
 }
 .trustItem {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 6px;
+  font-size: 11px;
   color: var(--text-secondary);
 }
 .trustIcon {
   flex-shrink: 0;
-  color: var(--accent);
+  width: 14px;
+  height: 14px;
+  color: var(--text-muted);
 }
 @media (max-width: 640px) {
-  .trustStripInner { gap: 12px; }
-  .trustItem { font-size: 12px; }
+  .trustStripInner { gap: 10px; }
+  .trustItem { font-size: 10px; }
 }
 
 .hero,
@@ -51,7 +53,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: clamp(320px, 50vw, 480px);
+  min-height: clamp(220px, 38vw, 320px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,78 +62,68 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 50% 50%, rgba(184, 69, 69, 0.07) 0%, transparent 50%),
-    linear-gradient(135deg, #fdf6f5 0%, #fbf0ee 35%, #f8e8e6 70%, #fbf0ee 100%);
-  background-size: 100% 100%, 100% 100%;
-  background-position: 0 0, 0 0;
+  background: linear-gradient(135deg, #f8f7f6 0%, #f2f0ee 50%, #f6f4f2 100%);
+  background-size: 100% 100%;
+  background-position: 0 0;
 }
 .heroBg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(184, 69, 69, 0.06) 1.5px, transparent 1.5px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
   pointer-events: none;
 }
 .heroBg::after {
-  content: "";
-  position: absolute;
-  width: min(65vw, 420px);
-  height: min(65vw, 420px);
-  top: -18%;
-  right: -12%;
-  background: radial-gradient(circle, rgba(184, 69, 69, 0.08) 0%, transparent 65%);
-  border-radius: 50%;
-  pointer-events: none;
+  display: none;
 }
 .heroContent {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: clamp(48px, 8vw, 80px) var(--content-padding);
-  max-width: 640px;
+  padding: clamp(28px, 5vw, 48px) var(--content-padding);
+  max-width: 520px;
 }
 .heroLabel {
   font-family: var(--font-display);
-  font-size: clamp(13px, 1.2vw, 14px);
+  font-size: clamp(11px, 1vw, 12px);
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 .heroTitle {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .heroSub {
   font-family: var(--font-display);
-  font-size: clamp(15px, 1.4vw, 17px);
+  font-size: clamp(13px, 1.1vw, 14px);
   color: var(--text-secondary);
   line-height: 1.5;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 .heroCta {
   font-family: var(--font-display);
   display: inline-block;
-  padding: 16px 36px;
+  padding: 10px 24px;
   background: var(--accent);
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 .heroCta:hover {
   background: var(--accent-hover);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .discoveryArea {
@@ -139,25 +131,25 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding-inline: var(--content-padding);
-  padding-block: clamp(32px, 4vw, 50px);
+  padding-block: clamp(20px, 3vw, 32px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .separator {
   width: 100%;
   height: 1px;
   background-color: var(--border-color);
-  margin: 50px 0;
+  margin: clamp(24px, 3vw, 36px) 0;
   transition: background-color 0.25s ease;
 }
 
 .bestSellingSection {
-  margin: 50px 0;
+  margin: clamp(24px, 3vw, 36px) 0;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(24px, 3vw, 36px);
 }
 
 .bestSellingHeader {
@@ -170,11 +162,11 @@
 .bestSellingIntro {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 
 .bestSellingTitle {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -183,11 +175,11 @@
 
 .viewAllBtn {
   background-color: var(--accent);
-  padding: 12px 24px;
+  padding: 8px 18px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
@@ -204,11 +196,11 @@
 
 .bestSellingCards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-items: stretch;
   align-items: start;
-  column-gap: clamp(24px, 3vw, 36px);
-  row-gap: clamp(28px, 3.5vw, 40px);
+  column-gap: clamp(16px, 2vw, 24px);
+  row-gap: clamp(20px, 2.5vw, 28px);
 }
 .bestSellingCards .cardContainer {
   max-width: none;
@@ -216,10 +208,10 @@
 }
 
 .flashSalesSection {
-  margin: 50px 0;
+  margin: clamp(24px, 3vw, 36px) 0;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(20px, 2.5vw, 28px);
   position: relative;
 }
 
@@ -227,25 +219,25 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .flashSalesIntro {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 
 .flashSalesContainer {
   display: flex;
   align-items: flex-end;
-  gap: 80px;
+  gap: clamp(16px, 2vw, 40px);
   flex-wrap: wrap;
 }
 
 .flashSalesTitle {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -255,34 +247,34 @@
 .flashSalesRight {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .countdownTimer {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 3px;
+  gap: 4px;
+  margin-bottom: 0;
 }
 
 .timerItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .timerLabel {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
-  color: var(--text-primary);
+  color: var(--text-muted);
   font-family: sans-serif;
   transition: color 0.25s ease;
 }
 
 .timerValue {
-  font-size: 32px;
+  font-size: clamp(18px, 2vw, 22px);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
@@ -290,29 +282,29 @@
 }
 
 .timerSeparator {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
-  color: #ff6b9d;
-  margin: 0 4px;
+  color: var(--text-muted);
+  margin: 0 2px;
   line-height: 1;
   align-self: flex-end;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .flashSalesNavigation {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
 }
 
 .flashSalesCards {
   display: flex;
-  gap: clamp(24px, 3vw, 40px);
+  gap: clamp(16px, 2vw, 24px);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding: 24px 0 40px;
+  padding: 16px 0 24px;
   margin: 0;
   position: relative;
 }
@@ -321,28 +313,28 @@
 }
 .flashSalesCards .cardContainer {
   flex: 0 0 auto;
-  width: 280px;
-  min-width: 280px;
-  max-width: 280px;
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flashSalesCards .cardContainer:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .flashSalesButtonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .viewAllProductsBtn {
   background-color: var(--accent);
-  padding: 16px 48px;
+  padding: 10px 32px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease;
@@ -353,27 +345,27 @@
 }
 
 .browseCategorySection {
-  margin: 50px 0;
+  margin: clamp(24px, 3vw, 36px) 0;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(20px, 2.5vw, 28px);
 }
 
 .browseCategoryHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 20px;
+  gap: 16px;
 }
 
 .browseCategoryIntro {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 
 .browseCategoryTitle {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -382,13 +374,13 @@
 
 .categoryNavigation {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
 }
 
 .navArrow {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   background: var(--bg-card);
@@ -396,49 +388,48 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1), background 0.25s ease, border-color 0.25s ease, color 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .navArrow:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: scale(1.1);
-  box-shadow: 0 4px 14px rgba(184, 69, 69, 0.3);
+  background: var(--bg-input);
+  border-color: var(--text-muted);
+  transform: scale(1.05);
 }
 .navArrow:active {
   transform: scale(0.96);
 }
 .navArrow:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--text-muted);
   outline-offset: 2px;
 }
 .navArrow svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   color: var(--text-primary);
-  transition: color 0.2s ease, transform 0.25s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 .navArrow:hover svg {
-  color: #fff;
+  color: var(--text-primary);
 }
 .navArrowLeft:hover svg {
-  transform: translateX(-2px);
+  transform: translateX(-1px);
 }
 .navArrowRight:hover svg {
-  transform: translateX(2px);
+  transform: translateX(1px);
 }
 
 .categoryCardsContainer {
   display: flex;
   flex-wrap: nowrap;
-  gap: clamp(20px, 2.5vw, 32px);
+  gap: clamp(12px, 1.5vw, 20px);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  padding-top: 6px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 6px;
 }
 .categoryCardsContainer::-webkit-scrollbar {
   display: none;
@@ -446,8 +437,8 @@
 
 .categoryCard {
   flex: 0 0 auto;
-  width: 140px;
-  min-width: 140px;
+  width: 100px;
+  min-width: 100px;
   aspect-ratio: 1;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -456,26 +447,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 20px;
+  gap: 8px;
+  padding: 12px;
   cursor: pointer;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, background 0.35s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
 .categoryCard:hover {
-  border-color: var(--accent);
+  border-color: var(--border-color);
   background: var(--bg-input);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .categoryCard:active {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .categoryIcon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,46 +478,48 @@
 }
 
 .categoryName {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 11px;
+  font-weight: 500;
   color: var(--text-primary);
   text-align: center;
+  line-height: 1.2;
 }
 
 .promoBannerSection {
   width: 100%;
-  min-height: 380px;
-  height: clamp(360px, 40vw, 440px);
-  background-color: #000;
+  min-height: 240px;
+  height: clamp(220px, 28vw, 300px);
+  background-color: #1a1a1a;
   display: flex;
-  padding: clamp(24px, 3vw, 40px) var(--content-padding);
+  padding: clamp(16px, 2.5vw, 28px) var(--content-padding);
   align-items: center;
   justify-content: space-between;
-  gap: clamp(16px, 2vw, 32px);
+  gap: clamp(12px, 1.5vw, 24px);
 }
 
 .bannerContent {
-  width: 45%;
+  width: 48%;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .bannerContent span {
-  color: #00ff66;
-  font-size: 16px;
+  color: #6ee7a0;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .bannerTitle {
-  font-size: 48px;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .bannerTimeContainer {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .time {
@@ -534,102 +527,115 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  background-color: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
 }
 
 .time h6 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
 .time span {
-  font-size: 11px;
-  font-weight: 400px;
-  color: black;
+  font-size: 9px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
 }
 
 .buyButton {
-  background-color: #00ff66;
-  border-radius: 4px;
+  background-color: #22c55e;
+  border-radius: 6px;
   color: white;
-  padding: 15px;
+  padding: 10px 20px;
   border: none;
-  width: 200px;
+  width: auto;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.buyButton:hover {
+  filter: brightness(1.1);
 }
 
 .bannerImage {
-  max-width: min(520px, 45vw);
+  max-width: min(320px, 38vw);
   height: auto;
-  max-height: 380px;
+  max-height: 240px;
   object-fit: contain;
-  filter: drop-shadow(0 0 80px rgba(255, 255, 255, 0.4));
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.2));
 }
 
 .exploreSection {
-  margin-top: 50px;
+  margin-top: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(20px, 2.5vw, 28px);
 }
 
 .sectionIntro {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 
 .sectionIndicator {
-  height: 50px;
+  height: 36px;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 12px;
   position: relative;
   width: fit-content;
 }
 
 .redBar {
   height: 100%;
-  width: 20px;
-  background-color: var(--accent);
-  border-radius: 4px;
+  width: 4px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.25s ease;
 }
 
 .sectionIndicator:hover .redBar {
   width: 100%;
+  opacity: 0.08;
 }
 
 .sectionIndicator {
-  cursor: pointer;
+  cursor: default;
   transition: transform 0.2s ease;
 }
 
 .sectionIndicator:hover {
-  transform: translateX(4px);
+  transform: none;
 }
 
 .sectionIndicator:hover h4 {
-  color: white;
-  z-index: 3;
+  color: var(--text-primary);
+  z-index: 2;
 }
 
 .sectionIndicator h4 {
   position: relative;
-  padding-left: 40px;
-  color: var(--accent);
+  padding-left: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-muted);
   transition: color 0.25s ease;
 }
 
 .exploreSectionTitle {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
@@ -638,11 +644,11 @@
 
 .exploreProductCards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-items: stretch;
   align-items: start;
-  column-gap: clamp(24px, 3vw, 36px);
-  row-gap: clamp(28px, 3.5vw, 42px);
+  column-gap: clamp(16px, 2vw, 24px);
+  row-gap: clamp(20px, 2.5vw, 28px);
 }
 .exploreProductCards .cardContainer {
   max-width: none;
@@ -651,11 +657,13 @@
 
 .viewProductsBtn {
   background-color: var(--accent);
-  padding: 15px;
-  width: 200px;
+  padding: 10px 28px;
+  width: auto;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #fff;
+  font-size: 13px;
+  font-weight: 500;
   align-self: center;
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease;
@@ -671,25 +679,25 @@
 }
 
 .newArrivalSection {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: clamp(24px, 3vw, 36px);
+  margin-bottom: clamp(24px, 3vw, 36px);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(20px, 2.5vw, 28px);
 }
 
 .productCollectionsContainer {
   display: grid;
-  gap: clamp(20px, 2vw, 30px);
-  min-height: 380px;
-  height: clamp(340px, 38vw, 420px);
+  gap: clamp(12px, 1.5vw, 20px);
+  min-height: 240px;
+  height: clamp(220px, 26vw, 280px);
   grid-template-areas:
     "playStation playStation womens womens"
     "playStation playStation speakers perfume";
 }
 
 .collection {
-  background-color: #000;
+  background-color: #1a1a1a;
   color: #fff;
   position: relative;
   border-radius: 8px;
@@ -698,23 +706,23 @@
 
 .collectionContent {
   position: absolute;
-  bottom: 20px;
-  left: 16px;
+  bottom: 12px;
+  left: 12px;
   z-index: 2;
   color: #fff;
-  width: 200px;
+  width: 160px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .collectionContent h3 {
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-size: clamp(0.85rem, 1vw, 1rem);
   font-weight: 600;
 }
 
 .collectionContent p {
-  font-size: 14px;
+  font-size: 11px;
   opacity: 0.9;
 }
 
@@ -769,26 +777,32 @@
 @media (max-width: 69.4em) {
   .promoBannerSection {
     height: auto;
+    min-height: auto;
     flex-direction: column;
     align-self: center;
+    padding: 20px var(--content-padding);
   }
 
   .bannerContent {
     width: 90%;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
 
   .bannerTitle {
-    font-size: 30px;
     text-align: center;
   }
 
   .bannerImage {
     width: 50%;
-    height: 50%;
-    max-height: 400px;
-    margin-top: 20px;
+    height: auto;
+    max-height: 200px;
+    margin-top: 12px;
+  }
+
+  .time {
+    width: 40px;
+    height: 40px;
   }
 
   .time span {
@@ -797,6 +811,7 @@
 
   .productCollectionsContainer {
     height: auto;
+    min-height: auto;
     grid-template-areas:
       "playStation playStation"
       "womens womens"
@@ -815,8 +830,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    height: 350px;
+    padding: 16px;
+    height: 260px;
   }
 
   .collectionContent {
@@ -824,50 +839,22 @@
     width: 90%;
     align-items: center;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 }
 
 @media (max-width: 48em) {
-  .bannerTitle {
-    font-size: 32px;
-  }
-
   .time {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
   }
 
   .time h6 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .time span {
-    font-size: 9px;
-  }
-
-  .exploreSectionTitle {
-    font-size: 28px;
-  }
-
-  .bestSellingTitle {
-    font-size: 28px;
-  }
-
-  .flashSalesTitle {
-    font-size: 28px;
-  }
-
-  .browseCategoryTitle {
-    font-size: 28px;
-  }
-
-  .timerValue {
-    font-size: 24px;
-  }
-
-  .timerSeparator {
-    font-size: 24px;
+    font-size: 8px;
   }
 
   .bestSellingHeader {
@@ -892,11 +879,11 @@
       "speakers"
       "perfume";
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 12px;
   }
 
   .collection {
-    height: 300px;
+    height: 220px;
     justify-content: center;
   }
 
@@ -907,34 +894,33 @@
 
 @media (max-width: 33em) {
   .flashSalesCards .cardContainer {
-    width: 260px;
-    min-width: 260px;
-    max-width: 260px;
-  }
-  .timerValue {
-    font-size: 20px;
-  }
-
-  .timerSeparator {
-    font-size: 20px;
-  }
-
-  .timerLabel {
-    font-size: 10px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
   }
 
   .flashSalesRight {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 12px;
   }
 
   .bannerTimeContainer {
-    gap: 10px;
+    gap: 8px;
   }
 
   .time {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .time h6 {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .discoveryArea {
+    max-width: var(--max-width);
   }
 }
