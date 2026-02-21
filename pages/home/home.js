@@ -1,40 +1,48 @@
-function redirectToDetails(productId) {
-  window.location.href = `../../pages/productDetails/product-details.html`;
+function redirectToDetails() {
+  window.location.href = "../../pages/productDetails/product-details.html";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const daysEl = document.getElementById("timerDays");
-  const hoursEl = document.getElementById("timerHours");
-  const minutesEl = document.getElementById("timerMinutes");
-  const secondsEl = document.getElementById("timerSeconds");
-  if (daysEl && hoursEl && minutesEl && secondsEl) {
-    var storageKey = "exclusiveFlashSaleEnd";
-    var endDate;
-    try {
-      var stored = localStorage.getItem(storageKey);
-      if (stored) endDate = new Date(Number(stored));
-      if (!stored || endDate <= new Date()) {
-        endDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 23 * 60 * 60 * 1000 + 19 * 60 * 1000 + 56 * 1000);
-        localStorage.setItem(storageKey, String(endDate.getTime()));
-      }
-    } catch (e) {
-      endDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 23 * 60 * 60 * 1000 + 19 * 60 * 1000 + 56 * 1000);
+function runCountdown(ids, storageKey, defaultOffsetMs) {
+  const els = ids.map((id) => document.getElementById(id));
+  if (els.some((el) => !el)) return;
+  const [daysEl, hoursEl, minutesEl, secondsEl] = els;
+  let endDate;
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored) endDate = new Date(Number(stored));
+    if (!stored || endDate <= new Date()) {
+      endDate = new Date(Date.now() + defaultOffsetMs);
+      localStorage.setItem(storageKey, String(endDate.getTime()));
     }
-    function updateCountdown() {
-      var now = new Date();
-      var diff = Math.max(0, endDate - now);
-      var d = Math.floor(diff / (24 * 60 * 60 * 1000));
-      var h = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-      var m = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
-      var s = Math.floor((diff % (60 * 1000)) / 1000);
-      daysEl.textContent = String(d).padStart(2, "0");
-      hoursEl.textContent = String(h).padStart(2, "0");
-      minutesEl.textContent = String(m).padStart(2, "0");
-      secondsEl.textContent = String(s).padStart(2, "0");
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+  } catch (_) {
+    endDate = new Date(Date.now() + defaultOffsetMs);
   }
+  function tick() {
+    const diff = Math.max(0, endDate - new Date());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    daysEl.textContent = String(d).padStart(2, "0");
+    hoursEl.textContent = String(h).padStart(2, "0");
+    minutesEl.textContent = String(m).padStart(2, "0");
+    secondsEl.textContent = String(s).padStart(2, "0");
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  runCountdown(
+    ["timerDays", "timerHours", "timerMinutes", "timerSeconds"],
+    "exclusiveFlashSaleEnd",
+    3 * 86400000 + 23 * 3600000 + 19 * 60000 + 56000
+  );
+  runCountdown(
+    ["bannerTimerDays", "bannerTimerHours", "bannerTimerMinutes", "bannerTimerSeconds"],
+    "exclusivePromoBannerEnd",
+    5 * 86400000 + 23 * 3600000 + 59 * 60000 + 35000
+  );
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -62,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
   slider.appendChild(fragmentEnd);
 
   const oneSetWidth = setLength * scrollDistance;
-  const totalWidth = oneSetWidth * 3;
 
   slider.style.scrollBehavior = "auto";
   slider.scrollLeft = oneSetWidth;

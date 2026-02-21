@@ -22,51 +22,59 @@
 
     <section class="productDetailsSection">
       <div class="path">
-        Account / Gaming / <span>Havic HV G-92 Gamepad</span>
+        Account / Gaming / <span>PS5 Controller</span>
       </div>
 
       <div class="productContainer">
         <div class="productImages">
-          <div class="image frontView">
+          <div class="image frontView" data-lightbox>
             <img
-              src="../../assets/images/gamePadFrontView.png"
-              alt="product Image"
-              class="mainImage"
+              src="../../assets/images/gamePadTransparent.png"
+              alt="PS5 Controller front view"
+              class="mainImage imgViewFront"
             />
           </div>
-
-          <div class="image fullView">
+          <div class="image fullView" data-lightbox>
             <img
-              src="../../assets/images/gamePadFullView.png"
-              alt="product Image"
+              src="../../assets/images/gamePadTransparent.png"
+              alt="PS5 Controller full view"
+              class="imgViewFull"
             />
           </div>
-
-          <div class="image rightSideAngle">
+          <div class="image rightSideAngle" data-lightbox>
             <img
-              src="../../assets/images/gamePadRightSideAngle.png"
-              alt="product Image"
+              src="../../assets/images/gamePadTransparent.png"
+              alt="PS5 Controller right angle"
+              class="imgViewRight"
             />
           </div>
-
-          <div class="image extendedView">
+          <div class="image extendedView" data-lightbox>
             <img
-              src="../../assets/images/gamePadExtendedView.png"
-              alt="product Image"
+              src="../../assets/images/gamePadTransparent.png"
+              alt="PS5 Controller extended view"
+              class="imgViewExtended"
             />
           </div>
-
-          <div class="image sideView">
+          <div class="image sideView" data-lightbox>
             <img
-              src="../../assets/images/gamePadSideView.png"
-              alt="product Image"
+              src="../../assets/images/gamePadTransparent.png"
+              alt="PS5 Controller side view"
+              class="imgViewSide"
             />
+          </div>
+        </div>
+
+        <div id="productLightbox" class="productLightbox" role="dialog" aria-modal="true" aria-label="Product image view" hidden>
+          <div class="productLightboxBackdrop"></div>
+          <div class="productLightboxContent">
+            <button type="button" class="productLightboxClose" aria-label="Close">×</button>
+            <img class="productLightboxImage" src="" alt="" />
           </div>
         </div>
 
         <div class="detailsContainer">
           <div class="productInfo">
-            <h3>Havic HV G-92 Gamepad</h3>
+            <h3>PS5 Controller</h3>
 
             <div class="statusAndRatingBar">
               <div class="ratingContainer">
@@ -247,7 +255,7 @@
       <div class="relatedCardsContainer">
         <product-card
           image=" ../../assets/images/redGamePad.png"
-          productTitle="HAVIT HV-G92 Gamepad"
+          productTitle="PS5 Controller"
           price="$120"
           stars="★★★★☆ (88)"
         ></product-card>

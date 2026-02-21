@@ -1,8 +1,29 @@
 class FooterComponent extends HTMLElement {
   connectedCallback() {
     this.render();
-    var form = this.querySelector(".subscribeForm");
-    if (form) form.addEventListener("submit", function (e) { e.preventDefault(); });
+    const form = this.querySelector(".subscribeForm");
+    if (!form) return;
+    const input = form.querySelector("#footerEmailInput");
+    const errEl = form.querySelector("#subscribeFormError");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (errEl) { errEl.hidden = true; errEl.textContent = ""; }
+      const email = (input && input.value) ? input.value.trim() : "";
+      if (!email) {
+        if (errEl) { errEl.textContent = "Please enter your email."; errEl.hidden = false; }
+        if (input) input.focus();
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        if (errEl) { errEl.textContent = "Please enter a valid email address."; errEl.hidden = false; }
+        if (input) input.focus();
+        return;
+      }
+    });
+    if (input && errEl) {
+      input.addEventListener("input", () => { errEl.hidden = true; errEl.textContent = ""; });
+    }
   }
 
   render() {
@@ -15,16 +36,18 @@ class FooterComponent extends HTMLElement {
                 <p class="sectionTitle">Subscribe</p>
                 <p class="smallText">Get 10% off your first order</p>
 
-                <form class="subscribeForm" action="#" method="POST">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="sendButton">
+                <form class="subscribeForm" action="#" method="POST" novalidate>
+                    <div class="subscribeFormWrap">
+                    <input type="email" placeholder="Enter your email" id="footerEmailInput" autocomplete="email">
+                    <button type="submit" class="sendButton" aria-label="Subscribe">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.91196 11.9998H3.99996L2.02296 4.1348C2.0103 4.0891 2.00259 4.04216 1.99996 3.9948C1.97796 3.2738 2.77196 2.7738 3.45996 3.1038L22 11.9998L3.45996 20.8958C2.77996 21.2228 1.99596 20.7368 1.99996 20.0288C2.00198 19.9655 2.0131 19.9029 2.03296 19.8428L3.49996 14.9998"
                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-
                     </button>
+                    </div>
+                    <p class="subscribeFormError" id="subscribeFormError" role="alert" hidden></p>
                 </form>
             </div>
 

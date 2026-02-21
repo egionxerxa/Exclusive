@@ -2,33 +2,27 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{7,15}$/;
 
 function showLoginModal(title, message) {
-  var modal = document.getElementById("loginModal");
-  var titleEl = document.getElementById("loginModalTitle");
-  var messageEl = document.getElementById("loginModalMessage");
-  var closeBtn = document.getElementById("loginModalClose");
+  const modal = document.getElementById("loginModal");
+  const titleEl = document.getElementById("loginModalTitle");
+  const messageEl = document.getElementById("loginModalMessage");
+  const closeBtn = document.getElementById("loginModalClose");
   if (!modal || !titleEl || !messageEl || !closeBtn) return;
   titleEl.textContent = title;
   messageEl.textContent = message;
   modal.removeAttribute("hidden");
   closeBtn.focus();
-  function closeModal() {
-    modal.setAttribute("hidden", "");
-  }
+  const closeModal = () => { modal.setAttribute("hidden", ""); };
   closeBtn.onclick = closeModal;
   modal.querySelector(".loginModalBackdrop").onclick = closeModal;
-  modal.addEventListener("keydown", function onKey(e) {
-    if (e.key === "Escape") {
-      closeModal();
-      modal.removeEventListener("keydown", onKey);
-    }
-  });
+  const onKey = (e) => { if (e.key === "Escape") { closeModal(); modal.removeEventListener("keydown", onKey); } };
+  modal.addEventListener("keydown", onKey);
 }
 
-var loginForm = document.getElementById("loginForm");
+const loginForm = document.getElementById("loginForm");
 if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
+  loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    var identifier = document.getElementById("loginIdentifier").value.trim();
+    const identifier = document.getElementById("loginIdentifier").value.trim();
     var password = document.getElementById("loginPassword").value.trim();
 
     if (identifier === "") {
@@ -67,38 +61,55 @@ if (loginForm) {
   });
 }
 
-var signupForm = document.getElementById("signupForm");
+function showSignupModal(title, message) {
+  const modal = document.getElementById("signupModal");
+  const titleEl = document.getElementById("signupModalTitle");
+  const messageEl = document.getElementById("signupModalMessage");
+  const closeBtn = document.getElementById("signupModalClose");
+  if (!modal || !titleEl || !messageEl || !closeBtn) return;
+  titleEl.textContent = title;
+  messageEl.textContent = message;
+  modal.removeAttribute("hidden");
+  closeBtn.focus();
+  const closeModal = () => { modal.setAttribute("hidden", ""); };
+  closeBtn.onclick = closeModal;
+  modal.querySelector(".signupModalBackdrop").onclick = closeModal;
+  const onKey = (e) => { if (e.key === "Escape") { closeModal(); modal.removeEventListener("keydown", onKey); } };
+  modal.addEventListener("keydown", onKey);
+}
+
+const signupForm = document.getElementById("signupForm");
 if (signupForm) {
-  signupForm.addEventListener("submit", function (e) {
+  signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    var name = document.getElementById("signupName").value.trim();
-    var identifier = document.getElementById("signupIdentifier").value.trim();
-    var password = document.getElementById("signupPassword").value.trim();
+    const name = document.getElementById("signupName").value.trim();
+    const identifier = document.getElementById("signupIdentifier").value.trim();
+    const password = document.getElementById("signupPassword").value.trim();
 
     if (name === "") {
-      alert("Name cannot be empty.");
+      showSignupModal("Name required", "Please enter your name.");
       return;
     }
     if (name.length < 2) {
-      alert("Name must be at least 2 characters long.");
+      showSignupModal("Name too short", "Name must be at least 2 characters long.");
       return;
     }
     if (identifier === "") {
-      alert("Email or Phone number cannot be empty.");
+      showSignupModal("Email or phone required", "Please enter your email or phone number.");
       return;
     }
     if (!emailRegex.test(identifier) && !phoneRegex.test(identifier)) {
-      alert("Invalid Email or Phone number.\n\n• Email must look like: example@mail.com\n• Phone must be 7–15 digits");
+      showSignupModal("Invalid email or phone", "Email must look like example@mail.com. Phone must be 7–15 digits.");
       return;
     }
     if (password === "") {
-      alert("Password cannot be empty.");
+      showSignupModal("Password required", "Please enter a password.");
       return;
     }
     if (password.length < 6) {
-      alert("Password is too short.\nIt must be at least 6 characters.");
+      showSignupModal("Password too short", "Use at least 6 characters for your password.");
       return;
     }
-    alert("Account created successfully!");
+    showSignupModal("Account created", "Your account has been created successfully.");
   });
 }

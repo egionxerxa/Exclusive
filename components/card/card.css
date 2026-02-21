@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--bg-input);
+  background: var(--bg-card);
   position: relative;
   padding: 12px;
   transition: background 0.3s ease;
@@ -158,9 +158,26 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.starIcon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.starFilled {
+  color: #eab308;
+}
+
+.starEmpty {
+  color: var(--border-color);
+}
+
+.starsCount {
+  margin-left: 4px;
   font-size: 11px;
-  transition: color 0.25s ease;
+  color: var(--text-muted);
 }
 
 .productCard.cardContainer {

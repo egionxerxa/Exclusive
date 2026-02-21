@@ -13,6 +13,7 @@
   padding-bottom: 100px;
   background: var(--bg-page);
   transition: background 0.35s ease;
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
 }
 .content {
   width: 100%;
@@ -38,6 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
 }
 .formTitle {
   font-size: clamp(1.15rem, 1.5vw, 1.35rem);
@@ -152,7 +154,8 @@
   }
 }
 
-.loginModal {
+.loginModal,
+.signupModal {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -160,28 +163,34 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
 }
-.loginModal[hidden] {
+.loginModal[hidden],
+.signupModal[hidden] {
   display: none;
 }
-.loginModalBackdrop {
+.loginModalBackdrop,
+.signupModalBackdrop {
   position: absolute;
   inset: 0;
-  background: rgba(44, 44, 44, 0.5);
-  backdrop-filter: blur(4px);
+  background: rgba(26, 26, 26, 0.45);
+  backdrop-filter: blur(6px);
 }
-.loginModalBox {
+.loginModalBox,
+.signupModalBox {
   position: relative;
   max-width: 360px;
   width: 100%;
-  padding: 24px;
+  padding: 28px;
   background: var(--bg-card);
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-color);
   text-align: center;
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
 }
-.loginModalIcon {
+.loginModalIcon,
+.signupModalIcon {
   width: 44px;
   height: 44px;
   margin: 0 auto 14px;
@@ -192,19 +201,22 @@
   line-height: 44px;
   border-radius: 50%;
 }
-.loginModalTitle {
+.loginModalTitle,
+.signupModalTitle {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
-.loginModalMessage {
+.loginModalMessage,
+.signupModalMessage {
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 18px;
 }
-.loginModalBtn {
+.loginModalBtn,
+.signupModalBtn {
   min-width: 120px;
   min-height: 40px;
   padding: 10px 22px;
@@ -215,13 +227,16 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  font-family: inherit;
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.loginModalBtn:hover {
+.loginModalBtn:hover,
+.signupModalBtn:hover {
   background: var(--accent-hover);
   transform: scale(1.02);
 }
-.loginModalBtn:focus {
+.loginModalBtn:focus,
+.signupModalBtn:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 2px var(--accent-muted);
 }

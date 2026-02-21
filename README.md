@@ -1,6 +1,6 @@
 # Exclusive
 
-A **frontend-only** showcase project. No backend or APIs—all forms and interactions are handled in the browser for demo purposes.
+A **strictly showcasing** frontend project built with **pure HTML, CSS, and JavaScript**. No frameworks, no backend, no APIs—all structure, styling, and behavior are implemented with vanilla technologies for demonstration purposes.
 
 **Entry point:** Open `start.html` in the project root to view the site; it redirects to the home page.
 
@@ -16,4 +16,8 @@ Make sure you have [Git](https://git-scm.com/) installed.
 
 1. Clone the repository:
 
+```bash
 git clone https://github.com/egionxerxa/Exclusive.git
+```
+
+2. Open `start.html` in your browser to view the project.

@@ -32,22 +32,45 @@
     "sideView       frontView";
 }
 .image {
-  background: var(--bg-input);
+  background: transparent;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
   cursor: pointer;
-  transition: background 0.35s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-light);
 }
 .image:hover {
-  background: var(--border-color);
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center center;
+}
+.imgViewFront,
+.mainImage {
+  object-position: 50% 22%;
+}
+.imgViewFull {
+  object-position: 50% 15%;
+  transform: scale(0.95);
+}
+.imgViewRight {
+  object-position: 55% 28%;
+  transform: scale(0.95) rotate(-5deg);
+}
+.imgViewExtended {
+  object-position: 45% 30%;
+  transform: scale(0.95) rotate(5deg);
+}
+.imgViewSide {
+  object-position: 50% 35%;
+  transform: scale(0.9) rotate(-3deg);
 }
 .frontView {
   grid-area: frontView;
@@ -63,6 +86,67 @@
 }
 .sideView {
   grid-area: sideView;
+}
+
+.productLightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.productLightbox[hidden] {
+  display: none;
+}
+.productLightboxBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+.productLightboxContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.productLightboxImage {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 8px;
+}
+.productLightboxClose {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.productLightboxClose:hover {
+  background: var(--bg-input);
+  transform: scale(1.05);
 }
 .detailsContainer {
   width: 42%;
@@ -243,6 +327,10 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 .qtyBtn:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+.qtyBtn.qtyActive {
   background-color: var(--accent);
   color: #fff;
 }

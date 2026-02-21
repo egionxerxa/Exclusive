@@ -51,7 +51,7 @@
     <section class="hero">
       <div class="heroBg"></div>
       <div class="heroContent">
-        <p class="heroLabel">New season, new style</p>
+        <p class="heroLabel">NEW SEASON, NEW STYLE</p>
         <h1 class="heroTitle">Find your next favourite</h1>
         <p class="heroSub">Free delivery on orders over $50. Easy returns. Real support.</p>
         <a href="../../pages/home/home.html#flashSales" class="heroCta">Shop now</a>
@@ -135,8 +135,8 @@
 
         <div class="flashSalesCards">
           <product-card
-            image="../../assets/images/redGamePad.png"
-            productTitle="HAVIT HV-G92 Gamepad"
+            image="../../assets/images/gamePadTransparent.png"
+            productTitle="PS5 Controller"
             price="$120"
             stars="★★★★★ (88)"
           ></product-card>
@@ -664,22 +664,19 @@
           <h1 class="bannerTitle">Enhance Your Music Experience</h1>
           <div class="bannerTimeContainer">
             <div class="time">
-              <h6>23</h6>
+              <h6 id="bannerTimerHours">23</h6>
               <span>Hours</span>
             </div>
-
             <div class="time">
-              <h6>05</h6>
+              <h6 id="bannerTimerDays">05</h6>
               <span>Days</span>
             </div>
-
             <div class="time">
-              <h6>59</h6>
+              <h6 id="bannerTimerMinutes">59</h6>
               <span>Minutes</span>
             </div>
-
             <div class="time">
-              <h6>35</h6>
+              <h6 id="bannerTimerSeconds">35</h6>
               <span>Seconds</span>
             </div>
           </div>
@@ -705,12 +702,12 @@
 
         <div class="exploreProductCards">
           <product-card
-            image="../../assets/images/gamePadFrontView.png"
-            productTitle="HAVIT HV-G92 Gamepad"
+            image="../../assets/images/gamePadTransparent.png"
+            productTitle="PS5 Controller"
             price="$192"
             stars="★★★★☆ (88)"
             id="mainProduct"
-            onClick="redirectToDetails('mainProduct')"
+            onclick="redirectToDetails()"
           ></product-card>
 
           <product-card

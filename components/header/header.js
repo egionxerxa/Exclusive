@@ -50,8 +50,8 @@ class HeaderComponent extends HTMLElement {
               class="searchInput"
               type="text"
               placeholder="Search"
+              aria-label="Search"
             />
-            <div></div>
             <svg
               class="searchIcon"
               width="18"

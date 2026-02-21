@@ -62,7 +62,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #f8f7f6 0%, #f2f0ee 50%, #f6f4f2 100%);
+  background: #f8f8f8;
   background-size: 100% 100%;
   background-position: 0 0;
 }
@@ -70,8 +70,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
   pointer-events: none;
 }
 .heroBg::after {
@@ -112,17 +112,19 @@
 .heroCta {
   font-family: var(--font-display);
   display: inline-block;
-  padding: 10px 24px;
-  background: var(--accent);
+  padding: 12px 28px;
+  background: #c23d3a;
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 .heroCta:hover {
-  background: var(--accent-hover);
+  background: #a83330;
   transform: translateY(-1px);
 }
 
@@ -489,7 +491,9 @@
   width: 100%;
   min-height: 240px;
   height: clamp(220px, 28vw, 300px);
-  background-color: #1a1a1a;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
   display: flex;
   padding: clamp(16px, 2.5vw, 28px) var(--content-padding);
   align-items: center;
@@ -499,22 +503,24 @@
 
 .bannerContent {
   width: 48%;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .bannerContent span {
-  color: #6ee7a0;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .bannerTitle {
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
   font-weight: 600;
   line-height: 1.25;
+  color: #fff;
 }
 
 .bannerTimeContainer {
@@ -527,7 +533,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255,255,255,0.12);
+  background-color: #000;
+  border: none;
   border-radius: 8px;
   width: 44px;
   height: 44px;
@@ -536,30 +543,31 @@
 .time h6 {
   font-size: 13px;
   font-weight: 600;
-  color: white;
+  color: #fff;
 }
 
 .time span {
   font-size: 9px;
   font-weight: 400;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .buyButton {
   background-color: #22c55e;
   border-radius: 6px;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   width: auto;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: filter 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .buyButton:hover {
-  filter: brightness(1.1);
+  background-color: #16a34a;
+  transform: translateY(-1px);
 }
 
 .bannerImage {
@@ -567,7 +575,6 @@
   height: auto;
   max-height: 240px;
   object-fit: contain;
-  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.2));
 }
 
 .exploreSection {
@@ -697,11 +704,12 @@
 }
 
 .collection {
-  background-color: #1a1a1a;
+  background-color: #000;
   color: #fff;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  border: none;
 }
 
 .collectionContent {
@@ -723,11 +731,11 @@
 
 .collectionContent p {
   font-size: 11px;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .collectionContent a {
-  color: #fff;
+  color: var(--header-footer-accent-on-dark, #e85c5c);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
