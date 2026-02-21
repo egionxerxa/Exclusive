@@ -58,19 +58,15 @@
 }
 .imgViewFull {
   object-position: 50% 15%;
-  transform: scale(0.95);
 }
 .imgViewRight {
   object-position: 55% 28%;
-  transform: scale(0.95) rotate(-5deg);
 }
 .imgViewExtended {
   object-position: 45% 30%;
-  transform: scale(0.95) rotate(5deg);
 }
 .imgViewSide {
   object-position: 50% 35%;
-  transform: scale(0.9) rotate(-3deg);
 }
 .frontView {
   grid-area: frontView;
